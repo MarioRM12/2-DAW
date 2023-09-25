@@ -49,8 +49,19 @@ function ej_8() {
     
 }
 
+let opcion;
+
 do {
-    let opcion = prompt("Menu...")
+    opcion = prompt("Menu...\n\
+    1. Ejercicio 1\n\
+    2. Ejercicio 2\n\
+    3. Ejercicio 3\n\
+    4. Ejercicio 4\n\
+    5. Ejercicio 5\n\
+    6. Ejercicio 6\n\
+    7. Ejercicio 7\n\
+    8. Ejercicio 8\n\
+    0. Salir")
     switch (opcion){
         case 1: ej_1();
         break;
