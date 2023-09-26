@@ -31,8 +31,18 @@ public class Factorial {
     }
 
     public BigInteger calcula() {
-        //TODO
-        return null;
+        if (n == 0) {
+            return BigInteger.ONE; // El factorial de 0 es 1
+        } else if (n < 0) {
+            throw new RuntimeException("Valor " + n + " no permitido.");
+        } else {
+            BigInteger result = BigInteger.ONE;
+            for (long i = 1; i <= n; i++) {
+                result = result.multiply(BigInteger.valueOf(i));
+            }
+            factorial = result;
+            return factorial;
+        }
     }
 
 }

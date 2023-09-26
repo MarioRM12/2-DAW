@@ -1,6 +1,7 @@
 package org.iesvdm;
 
 import java.math.BigDecimal;
+import java.math.BigDecimal;
 
 public class InteresCompuesto {
 
@@ -48,10 +49,15 @@ public class InteresCompuesto {
     }
 
     public BigDecimal calculaMontoFinal() {
-        //TODO
-        return null;
+        BigDecimal one = BigDecimal.ONE;
+        BigDecimal montoFinal = p; // Inicializamos el monto final con el monto principal
+
+        for (int i = 1; i <= n; i++) {
+            montoFinal = montoFinal.multiply(one.add(r)); // Aplicamos la fórmula en cada iteración
+        }
+
+        c = montoFinal; // Actualizamos el valor de c
+        return c;
     }
-
-
-
 }
+

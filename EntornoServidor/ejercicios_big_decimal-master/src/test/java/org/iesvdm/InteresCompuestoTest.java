@@ -13,14 +13,15 @@ public class InteresCompuestoTest {
     public void cuandoPrincipal1000Interes5porcientoY10peridos() {
 
         String principal = "1000";
-        int interes = 5;
+        BigDecimal principalBigDecimal = new BigDecimal(principal); // Convierte la cadena en un BigDecimal
+        BigDecimal interes = new BigDecimal("0.05"); // La tasa de interés del 5% como decimal
         int periodos = 10;
 
-        //TODO
-        InteresCompuesto interesCompuesto = null;
-        BigDecimal cantidadFinal = null;
+        InteresCompuesto interesCompuesto = new InteresCompuesto(principalBigDecimal, interes, periodos);
+        BigDecimal cantidadFinal = interesCompuesto.calculaMontoFinal();
 
         Assertions.assertEquals(new BigDecimal("1628.89"), cantidadFinal);
     }
+
 
 }
