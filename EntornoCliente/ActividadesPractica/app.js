@@ -1,4 +1,7 @@
 
+//LAS RESPUESTAS DE CADA FUNCION SALEN EN LA CONSOLA.
+
+
 function ej_1() {
 
     /*1.- Proyecto que pida dos números y que nos diga cual es mayor, menor o si son iguales.
@@ -17,6 +20,9 @@ function ej_1() {
     {
         console.log("El numero",num2,"es mayor que",num1);
     }
+
+    console.log("Con ternaria:")
+    num1 == num2 ? console.log("Los numeros son iguales") : (num1 > num2 ? console.log("El numero",num1,"es mayor que " + num2) : console.log("El numero",num2,"es mayor que " + num1));
 
 }
 
@@ -95,20 +101,77 @@ function ej_4() {
 }
 
 function ej_5() {
-    
+
+    /*5.- Mostrar todos los números impares que hay entre dos números introducidos por el usuario.*/
+
+    let num1 = parseInt(prompt("Escribe el primer número"));
+    let num2 = parseInt(prompt("Escribe el segundo número"));
+
+    if (isNaN(num1) || isNaN(num2)) {
+        console.log("Por favor, introduce números válidos.");
+        return;
+    }
+
+    for (let i = num1; i <= num2; i++) {
+        if (i % 2 !== 0) {
+            console.log(i);
+        }
+    }
 }
 
 function ej_6() {
+
+    /*6.- Mostrar todos los números divisores de un numero introduce en prompt*/
     
+    let num = parseInt(prompt("Escribe un número para encontrar sus divisores"));
+
+    if (isNaN(num)) {
+        console.log("Por favor, introduce un número válido.");
+        return;
+    }
+
+    for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+            console.log(i);
+        }
+    }
 }
 
 function ej_7() {
-    
+
+    /*7.- Que nos diga si un número es par o impar.
+    - Ventana prompt
+    - Si no es válido que nos pida de nuevo el numero*/
+
+    let num;
+
+    do {
+        num = parseInt(prompt("Escribe un número para saber si es par o impar"));
+    } while (isNaN(num));
+
+    if (num % 2 === 0) {
+        console.log("El número " + num + " es par.");
+    } else {
+        console.log("El número " + num + " es impar.");
+    }
 }
 
 function ej_8() {
-    
+
+    /* 8.- Que muestre la tabla de multiplicar de un valor introducido por pantalla.*/
+
+    let num = parseInt(prompt("Escribe un número para mostrar su tabla de multiplicar"));
+
+    if (isNaN(num)) {
+        console.log("Por favor, introduce un número válido.");
+        return;
+    }
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(num + " x " + i + " = " + (num * i));
+    }
 }
+
 
 let opcion;
 
@@ -124,8 +187,7 @@ do {
     8. Ejercicio 8\n\
     0. Salir"))
     switch (opcion){
-        case 1: 
-            console.log("Hola que tal")
+        case 1:
             ej_1();
         break;
         case 2: 
