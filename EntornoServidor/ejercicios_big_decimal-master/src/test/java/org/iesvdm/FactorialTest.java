@@ -11,7 +11,6 @@ public class FactorialTest {
     @Test
     public void cuandoFactorial1234() {
 
-        //TODO
         Factorial factorial = new Factorial(1234);
 
         BigInteger resultado = factorial.calcula();

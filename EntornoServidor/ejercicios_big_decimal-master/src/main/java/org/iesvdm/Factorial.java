@@ -31,6 +31,16 @@ public class Factorial {
     }
 
     public BigInteger calcula() {
+
+        //this.factorial = BigInteger.ONE;
+
+        //for (long i = 2; i <= this.n; i++)
+        //{
+
+
+
+        //}
+
         if (n == 0) {
             return BigInteger.ONE; // El factorial de 0 es 1
         } else if (n < 0) {
@@ -43,6 +53,7 @@ public class Factorial {
             factorial = result;
             return factorial;
         }
+
     }
 
 }

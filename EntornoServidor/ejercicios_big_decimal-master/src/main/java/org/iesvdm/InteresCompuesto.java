@@ -2,6 +2,7 @@ package org.iesvdm;
 
 import java.math.BigDecimal;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class InteresCompuesto {
 
@@ -52,11 +53,12 @@ public class InteresCompuesto {
         BigDecimal one = BigDecimal.ONE;
         BigDecimal montoFinal = p; // Inicializamos el monto final con el monto principal
 
-        for (int i = 1; i <= n; i++) {
-            montoFinal = montoFinal.multiply(one.add(r)); // Aplicamos la fórmula en cada iteración
-        }
+        montoFinal = montoFinal.multiply(one.add(r).pow(n));
 
         c = montoFinal; // Actualizamos el valor de c
+
+        c = c.setScale(2, RoundingMode.HALF_UP);
+
         return c;
     }
 }
