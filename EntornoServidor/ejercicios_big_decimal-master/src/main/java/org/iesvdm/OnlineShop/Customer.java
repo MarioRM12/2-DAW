@@ -1,24 +1,24 @@
 package org.iesvdm.OnlineShop;
 
 public class Customer {
-
-    String id;
+    private static Integer contador = 0;
+    private Integer id;
     Address address;
     String phone;
     String email;
 
     public Customer(String id, Address address, String phone, String email) {
-        this.id = id;
+        this.id = contador++;
         this.address = address;
         this.phone = phone;
         this.email = email;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

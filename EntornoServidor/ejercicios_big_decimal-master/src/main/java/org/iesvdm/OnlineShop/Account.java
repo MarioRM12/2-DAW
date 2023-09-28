@@ -1,31 +1,20 @@
 package org.iesvdm.OnlineShop;
 
-import java.lang.foreign.AddressLayout;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Account {
-
-    private String id;
+    private Integer id;
     private Address billing_address;
     private Boolean is_closed;
     private LocalDate open;
     private Customer customer;
 
-    public Account(String id, Address billing_address, Boolean is_closed, LocalDate open, Customer customer) {
-        this.id = id;
+    public Account(Address billing_address, Boolean is_closed, LocalDate open, Customer customer) {
+        this.id = this.customer.getId();
         this.billing_address = billing_address;
         this.is_closed = is_closed;
         this.open = open;
         this.customer = customer;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Address getBilling_address() {
