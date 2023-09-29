@@ -1,38 +1,77 @@
+
+let Arreglo = ["hola","paco","que tal"];
+
 function ej_1() {
     //1.- Crea un documento con un arreglo llamado actividad1 que contenga 3 elementos.
+    console.log(Arreglo);
 }
+
 function ej_2() {
     //2.- Añade un cuarto elemento al final del arreglo utilizando los métodos de los arreglos.
+
+    let nuevo = prompt("Dime un nuevo elemento para añadir al final del array");
+
+    Arreglo.push(nuevo);
+
+    console.log(Arreglo);
+    
 }
+
 function ej_3() {
     //3.- Añade un quinto elemento al comienzo del arreglo utilizando los métodos de los arreglos.
     //Que guarde en una variable el nuevo tamaño del arreglo.
+
+    let nuevo = prompt("Dime un nuevo elemento para añadir al principio del array");
+
+    Arreglo.unshift(nuevo);
+
+    console.log(Arreglo);
+
 }
+
 function ej_4() {
     //4.- Que muestre por pantalla el arreglo y el tamaño.
+
+    console.log("El array es: " + Arreglo);
+    console.log("Su longuitud es: " + Arreglo.length);
+
 }
+
 function ej_5() {
     //5.- Que solicite por pantalla los datos necesarios para eliminar varios elementos de un array
     //desde una posición concreta.
+
+    var cantidad = prompt("Ingrese la cantidad de elementos a eliminar:");
+    var posicion = prompt(Arreglo + " - Ingrese la posición desde la cual desea eliminar elementos:");
+    
+    actividad1.splice(posicion, cantidad);
+
+    console.log(Arreglo);
 }
+
 function ej_6() {
     //6.- Que solicite por pantalla un valor y que devuelva el índice del arreglo donde se encuentra
     //ese valor.
 }
+
 function ej_7() {
     //7.- Que muestre por pantalla el arreglo y el tamaño.
 }
+
 function ej_8() {
     //8.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
 }
+
 function ej_9() {
     //9.- Utilizando los métodos, que devuelva el array creado de manera que esté ordenado
     //alfabéticamente.
 }
+
 function ej_10() {
     //10.- Utilizando los métodos, que devuelva el array creado de manera que esté ordenado al
     //contrario.
 }
+
 function ej_11() {
     //11.- Investiga para encontrar un método dentro de la librería underscore.js que nos desordene
     //los elementos de un arreglo. Este arreglo desordenado lo almacenará en una copia. Muestra
@@ -41,11 +80,11 @@ function ej_11() {
 
 do {
     opcion = parseInt(prompt("Menu...\n\
-    1. Ejercicio 1\n\
-    2. Ejercicio 2\n\
-    3. Ejercicio 3\n\
-    4. Ejercicio 4\n\
-    5. Ejercicio 5\n\
+    1. Ejercicio 1 Muestra el array\n\
+    2. Ejercicio 2 Añade un elemento al final\n\
+    3. Ejercicio 3 Añade un elemento al principio\n\
+    4. Ejercicio 4 Muestra el array y su longuitud\n\
+    5. Ejercicio 5 Eliminar elementos a placer\n\
     6. Ejercicio 6\n\
     7. Ejercicio 7\n\
     8. Ejercicio 8\n\
