@@ -4,12 +4,22 @@ import java.math.BigDecimal;
 
 public class LineItem {
 
-    Integer quantity;
-    BigDecimal price;
+    private Integer quantity;
+    private BigDecimal price;
+    private Product product;
 
-    public LineItem(Integer quantity, BigDecimal price) {
+    public LineItem(Integer quantity, BigDecimal price, Product product) {
         this.quantity = quantity;
         this.price = price;
+        this.product = product;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public Integer getQuantity() {
