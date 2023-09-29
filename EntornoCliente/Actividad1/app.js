@@ -84,7 +84,7 @@ function ej_4() {
 
     if (num1 > num2) {
         iterador = num2
-        while (iterador <= num1) {
+        while (iterador < num1) {
             console.log(iterador)
             iterador++
         }
@@ -92,7 +92,7 @@ function ej_4() {
     else
     {
         iterador = num1
-        while (iterador <= num2) {
+        while (iterador < num2) {
             console.log(iterador)
             iterador++
         }
