@@ -3,7 +3,7 @@ let Arreglo = ["hola","paco","que tal"];
 
 function ej_1() {
     //1.- Crea un documento con un arreglo llamado actividad1 que contenga 3 elementos.
-    console.log(Arreglo);
+    alert(Arreglo);
 }
 
 function ej_2() {
@@ -13,7 +13,7 @@ function ej_2() {
 
     Arreglo.push(nuevo);
 
-    console.log(Arreglo);
+    alert(Arreglo);
     
 }
 
@@ -25,15 +25,14 @@ function ej_3() {
 
     Arreglo.unshift(nuevo);
 
-    console.log(Arreglo);
+    alert(Arreglo);
 
 }
 
 function ej_4() {
     //4.- Que muestre por pantalla el arreglo y el tamaño.
 
-    console.log("El array es: " + Arreglo);
-    console.log("Su longuitud es: " + Arreglo.length);
+    alert("El array es: " + Arreglo + "\n Su longuitud es: " + Arreglo.length);
 
 }
 
@@ -41,25 +40,43 @@ function ej_5() {
     //5.- Que solicite por pantalla los datos necesarios para eliminar varios elementos de un array
     //desde una posición concreta.
 
-    var cantidad = prompt("Ingrese la cantidad de elementos a eliminar:");
-    var posicion = prompt(Arreglo + " - Ingrese la posición desde la cual desea eliminar elementos:");
+    let elementoAEliminar = prompt("El array es: " + Arreglo + "\nIntroduzca el elemento a eliminar");
     
-    actividad1.splice(posicion, cantidad);
+    let newArray = Arreglo.filter(item => item !== elementoAEliminar);
+    
+    Arreglo = newArray;
 
-    console.log(Arreglo);
+    alert(Arreglo);
+
 }
 
 function ej_6() {
     //6.- Que solicite por pantalla un valor y que devuelva el índice del arreglo donde se encuentra
     //ese valor.
+
+    let valorBuscado = prompt("Ingrese el elemento que desea buscar:");
+
+    let indice = Arreglo.indexOf(valorBuscado);
+    
+    if (indice == -1) {
+        alert("El elemento '" + valorBuscado + "', no se encuentra en el array")
+    }
+    else {
+        alert("El elemento '" + valorBuscado + "', se encuentra en la posición " + indice);
+    }
 }
 
 function ej_7() {
-    //7.- Que muestre por pantalla el arreglo y el tamaño.
+    //8.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
+
+
 }
 
 function ej_8() {
     //8.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
+
+    //Arreglo.
+
 }
 
 function ej_9() {
@@ -84,9 +101,9 @@ do {
     2. Ejercicio 2 Añade un elemento al final\n\
     3. Ejercicio 3 Añade un elemento al principio\n\
     4. Ejercicio 4 Muestra el array y su longuitud\n\
-    5. Ejercicio 5 Eliminar elementos a placer\n\
-    6. Ejercicio 6\n\
-    7. Ejercicio 7\n\
+    5. Ejercicio 5 Eliminar un elemento\n\
+    6. Ejercicio 6 Posicion de un elemento\n\
+    7. Ejercicio 7 -\n\
     8. Ejercicio 8\n\
     8. Ejercicio 9\n\
     8. Ejercicio 10\n\
