@@ -67,32 +67,70 @@ function ej_6() {
 }
 
 function ej_7() {
-    //8.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
+    //7.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
 
+    let nuevoElemento = prompt("Ingrese un nuevo elemento:");
+    let posicion = prompt("Ingrese la posición en la que desea agregar el elemento:");
+    
+    // Convierte la posición a un número entero.
+    posicion = parseInt(posicion);
+
+    if (posicion >= 0 && posicion <= Arreglo.length) {
+        Arreglo.splice(posicion, 0, nuevoElemento); // Inserta el elemento en la posición dada.
+        alert("El elemento '" + nuevoElemento + "' ha sido agregado en la posición " + posicion);
+        alert("El array resultante es: " + Arreglo);
+    } else {
+        alert("La posición especificada no es válida.");
+    }
 
 }
 
 function ej_8() {
     //8.- Busca al menos 2 métodos de los arreglos que encuentres interesantes y los utilizas.
 
-    //Arreglo.
+    if (Arreglo.length > 0) {
+        let elementoEliminado = Arreglo.pop();
+        alert("Elemento eliminado: " + elementoEliminado);
+        alert("El array resultante es: " + Arreglo);
+    } else {
+        alert("El arreglo está vacío, no se puede eliminar ningún elemento.");
+    }
 
 }
 
 function ej_9() {
     //9.- Utilizando los métodos, que devuelva el array creado de manera que esté ordenado
     //alfabéticamente.
+
+    Arreglo.sort();
+    alert("El arreglo ordenado alfabéticamente es: " + Arreglo);
+
 }
 
 function ej_10() {
     //10.- Utilizando los métodos, que devuelva el array creado de manera que esté ordenado al
     //contrario.
+
+    Arreglo.reverse();
+    alert("El arreglo invertido es: " + Arreglo);
+
 }
 
 function ej_11() {
     //11.- Investiga para encontrar un método dentro de la librería underscore.js que nos desordene
     //los elementos de un arreglo. Este arreglo desordenado lo almacenará en una copia. Muestra
     //que se vea el arreglo ordenado y desordenado.
+
+    // Primero, asegúrate de incluir la librería underscore.js en tu proyecto.
+
+    // Desordenar el arreglo usando _.shuffle
+    let arregloDesordenado = _.shuffle(Arreglo);
+
+    alert("Arreglo original: " + Arreglo);
+    alert("Arreglo desordenado: " + arregloDesordenado);
+
+    Arreglo = arregloDesordenado;
+
 }
 
 do {
@@ -103,11 +141,11 @@ do {
     4. Ejercicio 4 Muestra el array y su longuitud\n\
     5. Ejercicio 5 Eliminar un elemento\n\
     6. Ejercicio 6 Posicion de un elemento\n\
-    7. Ejercicio 7 -\n\
-    8. Ejercicio 8\n\
-    8. Ejercicio 9\n\
-    8. Ejercicio 10\n\
-    8. Ejercicio 11\n\
+    7. Ejercicio 7 Ingresar elemento en posicion deseada\n\
+    8. Ejercicio 8 Elimina el elemento en la ultima posicion\n\
+    9. Ejercicio 9 Ordenar alfabeticamente el array\n\
+    10. Ejercicio 10 Invertir el array\n\
+    11. Ejercicio 11 Desordenar el array\n\
     0. Salir"))
     switch (opcion){
         case 1:
