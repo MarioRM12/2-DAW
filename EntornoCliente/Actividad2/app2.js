@@ -179,7 +179,7 @@ do {
             ej_10();
         break;
         case 11:
-            ej_10();
+            ej_11();
         break;
     }
 } while (opcion > 0);
