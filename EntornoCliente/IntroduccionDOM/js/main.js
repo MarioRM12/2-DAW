@@ -45,29 +45,57 @@ let texto = prompt('Dime texto');
 celda6.innerText = texto;
 
     //opcion 2
-    celda6 = document.getElementById('f2c3');
-    celda6.innerText = prompt('Dime texto');
+    
+    //celda6 = document.getElementById('f2c3');
+    //celda6.innerText = prompt('Dime texto');
 
     //opcion 2
-    document.getElementById('f2c3').innerText = prompt('Dime texto');
+    
+    //document.getElementById('f2c3').innerText = prompt('Dime texto');
 
 ////Función para la pulsación del botón
-const boton = document.getElementById('boton');
-boton.addEventListener('click', cambiarTitulo)
+
+// const boton = document.getElementById('boton');
+// boton.addEventListener('click', cambiarTitulo)
 
 //boton_click: añadir * en título
+function boton_click(){
+    const titulo = document.querySelector('h1');
+    titulo.innerHTML = `*${titulo.innerText}*`;
+}
 
-//boton_click2: añadir - en título
+//boton_click2: añadir + en título
+function boton_click2(){
+    const titulo = document.querySelector('h1');
+    titulo.innerHTML = `+${titulo.innerText}+`;
+}
+
+
 
 //Asignación de función a la pulsación del botón (click, mousedown, mouseup)
 
+const boton = document.getElementById('boton');
+boton.addEventListener('mousedown', boton_click);
+boton.addEventListener('mouseup', boton_click2);
+
+
 //Restauración del título al hacer clic en el mismo.
 
+const titulo = document.querySelector('h1');
+
+titulo.addEventListener('click', () => titulo.innerHTML = "Introducción al DOM");
+titulo.addEventListener('mousedown', () => titulo.innerHTML = "JavaScript es una locura");
 
 ////Añadir nuevos elementos HTML al final de un elemento existente (id: ultimaFila)
+
+
+
 //Crear una nueva fila div-row, con un elemento columna div-col (con bg-danger).
 
+
+
 //Añadir al final del contenedor (container || container-fluid)
+
 
 
 ////Añadir nuevo elemento HTML junto a un elemento existente (antes de ultimaFila)
