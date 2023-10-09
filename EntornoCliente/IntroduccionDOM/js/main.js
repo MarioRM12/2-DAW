@@ -88,15 +88,26 @@ titulo.addEventListener('mousedown', () => titulo.innerHTML = "JavaScript es una
 
 ////Añadir nuevos elementos HTML al final de un elemento existente (id: ultimaFila)
 
+let nuevaFila = document.createElement('div');
+nuevaFila.setAttribute('id','ultimaFila');
+nuevaFila.classList.add('row');
 
-
-//Crear una nueva fila div-row, con un elemento columna div-col (con bg-danger).
-
-
+const nuevoElemento = document.createElement('div');
+nuevoElemento.classList.add('col','bg-danger');
+nuevoElemento.innerText = "SOY el f... ultimo";
+nuevaFila.append(nuevoElemento);
+ //console.log(nuevaFila);
 
 //Añadir al final del contenedor (container || container-fluid)
 
+const container = document.querySelector(`div`);
 
+//container.insertAdjacentElement('beforeend', nuevaFila);
+container.append(nuevaFila);
+
+
+
+nuevaFila.insertAdjacentElement('beforebegin',penultimo)
 
 ////Añadir nuevo elemento HTML junto a un elemento existente (antes de ultimaFila)
 ////element.insertAdjacentElement(position, element); //beforbegin, afterbegin, beforeend, afterend
