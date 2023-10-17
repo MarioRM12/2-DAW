@@ -9,25 +9,26 @@ volver a introducir más valores.
  Por cada vez que generemos una suma y media de valores se crea una fila en el
 documento html con los resultados.*/
 
-const PedirvaloresBoton = document.getElementById("PedirValores");
+const PedirvaloresBoton = document.getElementById("nuevosValores");
+const resultadoTabla = document.getElementById
 
 PedirvaloresBoton.addEventListener("click", () => {
-
   let contador = 0;
   let sumatorio = 0;
-  let introducido = 0;
+  let introducido;
 
   do {
-  
-    introducido = prompt("Introduzca un numero valido");
+      introducido = parseFloat(prompt("Introduzca un número válido"));
 
-    if (isNaN(introducido) && introducido >= 0) {
-
-      contador++;
-      sumatorio = sumatorio + introducido;
-    
-    }
-    
+      if (!isNaN(introducido) && introducido >= 0) {
+          contador++;
+          sumatorio += introducido;
+      }
   } while (introducido >= 0);
 
+  if (contador > 0) {
+    const media = sumatorio / contador;
+  }
+
+  document.body.appendChild();
 });
