@@ -1,7 +1,7 @@
 
 
 
-let imagenes = ['Ballena','Elefante', 'Gallo','Girafa','Hormiga','Leon','Pajaro','Perro'];
+let imagenes = ['Ballena','Elefante', 'Gallo','Jirafa','Hormiga','Leon','Pajaro','Perro'];
 
 console.log(imagenes);
 
@@ -24,7 +24,8 @@ const Perro = document.querySelector('#Perro');
 Ballena.addEventListener('click' , () => {
 
     destino.appendChild(Ballena);
-    imagenes.splice('Ballena',1);
+    imagenes.splice(imagenes.indexOf('Ballena'),1);
+    console.log("Se ha eliminado Ballena");
     console.log(imagenes);
 
 })
@@ -32,7 +33,8 @@ Ballena.addEventListener('click' , () => {
 Elefante.addEventListener('click' , () => {
 
     destino.appendChild(Elefante);
-    imagenes.splice('Elefante',1);
+    imagenes.splice(imagenes.indexOf('Elefante'),1);
+    console.log("Se ha eliminado Elefante");
     console.log(imagenes);
 
 })
@@ -40,7 +42,8 @@ Elefante.addEventListener('click' , () => {
 Gallo.addEventListener('click' , () => {
 
     destino.appendChild(Gallo);
-    imagenes.splice('Gallo',1);
+    imagenes.splice(imagenes.indexOf('Gallo'),1);
+    console.log("Se ha eliminado Gallo");
     console.log(imagenes);
 
 })
@@ -48,7 +51,8 @@ Gallo.addEventListener('click' , () => {
 Jirafa.addEventListener('click' , () => {
 
     destino.appendChild(Jirafa);
-    imagenes.splice('Jirafa',1);
+    imagenes.splice(imagenes.indexOf('Jirafa'),1);
+    console.log("Se ha eliminado Jirafa");
     console.log(imagenes);
 
 })
@@ -56,7 +60,8 @@ Jirafa.addEventListener('click' , () => {
 Hormiga.addEventListener('click' , () => {
 
     destino.appendChild(Hormiga);
-    imagenes.splice('Hormiga',1);
+    imagenes.splice(imagenes.indexOf('Hormiga'),1);
+    console.log("Se ha eliminado Hormiga");
     console.log(imagenes);
 
 })
@@ -64,7 +69,8 @@ Hormiga.addEventListener('click' , () => {
 Leon.addEventListener('click' , () => {
 
     destino.appendChild(Leon);
-    imagenes.splice('Leon',1);
+    imagenes.splice(imagenes.indexOf('Leon'),1);
+    console.log("Se ha eliminado Leon");
     console.log(imagenes);
 
 })
@@ -72,7 +78,8 @@ Leon.addEventListener('click' , () => {
 Pajaro.addEventListener('click' , () => {
 
     destino.appendChild(Pajaro);
-    imagenes.splice('Pajaro',1);
+    imagenes.splice(imagenes.indexOf('Pajaro'),1);
+    console.log("Se ha eliminado Pajaro");
     console.log(imagenes);
 
 })
@@ -80,7 +87,8 @@ Pajaro.addEventListener('click' , () => {
 Perro.addEventListener('click' , () => {
 
     destino.appendChild(Perro);
-    imagenes.splice('Perro',1);
+    imagenes.splice(imagenes.indexOf('Perro'),1);
+    console.log("Se ha eliminado Perro");
     console.log(imagenes);
 
 })
