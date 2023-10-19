@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+
+    background: #88ADE8 url("../images/bg-body.jpg") repeat-x;;
+
+}
+
+#Cuerpo{
+
+    position: relative;
+    background-color: white;
+    margin: 0 auto;
+    min-width: 600px;
+    max-width: 1200px;
+
+}
+
+header{
+    position: relative;
+    width: 100%;
+    float: left;
+
+}
+
+nav{
+
+    position: relative;
+    float: left;
+
+}
+
+ul{
+    
+    position: relative;
+    
+
+}
+
+li{
+    
+    list-style: none;
+    display: inline-block;
+}
+
+
