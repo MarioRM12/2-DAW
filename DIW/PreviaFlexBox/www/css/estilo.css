@@ -1,0 +1,213 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif ;
+
+}
+
+body{
+
+    background: #88ADE8 url("../images/bg-body.jpg") repeat-x;;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+#Cuerpo{
+
+    position: relative;
+    margin: 0 auto;
+    min-width: 600px;
+    max-width: 762px;
+
+}
+
+header{
+    
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: transparent;
+    color: white;
+
+}
+
+h1{
+
+    position: relative;
+    margin: 0 20px;
+
+}
+
+header > small{
+
+    margin: 0 25px;
+    
+}
+
+header > p{
+    
+    position: absolute;
+    right: 120px;
+    top: 35px;
+    background-image: url(../images/);
+
+}
+
+#imgBuscar{
+
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 20px ;
+    float: right;
+    
+}
+
+nav{
+
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #0f2132;
+
+}
+
+ul{
+
+    list-style: none;
+
+}
+
+nav > ul{
+    
+    position: relative; 
+
+}
+
+nav > li{
+    
+    position: relative;
+    display: inline-block;
+
+}
+
+nav > a{
+
+    position: relative;
+    float: right;
+}
+
+#Portada{
+
+    position: relative;
+
+}
+
+#BGPortada{
+
+    position: relative;
+
+}
+
+div > h2{
+
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    z-index: 0;
+    color: #1c3568;
+
+}
+
+#contenido{
+
+    position: relative;
+    background-color: white;
+
+}
+
+main{
+
+    position: relative;
+
+}
+
+h2{
+    
+}
+
+#Primario{
+
+    position: relative;
+
+}
+
+#Primario > article{
+
+    position: relative;
+
+}
+
+#Secundario{
+
+    position: relative;
+}
+
+#Secundario > article{
+
+    position: relative;
+
+}
+
+#Fotos{
+
+    position: relative;
+    width: 50%;
+
+}
+
+#Fotos > img {
+
+    position: relative;
+
+}
+
+aside{
+
+    position: relative;
+    width: 30%;
+
+}
+
+#info{
+
+    position: relative;
+
+}
+
+#Categorias{
+
+    position: relative;
+
+}
+
+#Archivo{
+
+    position: relative;
+
+}
+
+footer{
+
+    position: relative;
+    background-color: #0f2132;
+    height: 50px;
+}
+
+small{
+
+    position: relative;
+
+}
