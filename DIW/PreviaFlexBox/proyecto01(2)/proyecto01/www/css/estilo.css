@@ -1,7 +1,9 @@
 *{
+
     margin: 0;
     padding: 0;
     border: 0;
+
 }
 
 body{
@@ -16,14 +18,21 @@ body{
     background-color: white;
     margin: 0 auto;
     min-width: 600px;
-    max-width: 1200px;
+    max-width: 1000px;
 
 }
 
 header{
+    
     position: relative;
     width: 100%;
     float: left;
+
+}
+
+h1{
+
+    position: relative;
 
 }
 
@@ -34,17 +43,59 @@ nav{
 
 }
 
-ul{
+nav > ul{
     
     position: relative;
-    
 
 }
 
-li{
+nav > li{
     
     list-style: none;
     display: inline-block;
+
 }
+
+#Cabezera{
+
+    position: relative;
+
+}
+
+#Cabecera > h2{
+
+    position: relative;
+
+}
+
+main{
+
+    position: relative;
+
+}
+
+#Primario{
+
+    position: relative;
+
+}
+
+#Primario > article{
+
+    position: relative;
+
+}
+
+#Secundario{
+
+    position: relative;
+}
+
+#Secundario > article{
+
+    position: relative;
+
+}
+
 
 
