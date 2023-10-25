@@ -24,6 +24,10 @@ body{
 
 }
 
+ul{
+    list-style: none;
+}
+
 header{
     
     position: relative;
@@ -90,7 +94,6 @@ nav{
 nav > ul{
 
     position: relative;
-    list-style: none;
     overflow: hidden;
 
 }
@@ -169,6 +172,14 @@ nav > ul > li > a{
 
 }
 
+#Articulos p{
+
+    font-size:small ;
+    width: 100%;
+    padding: 10px;
+
+}
+
 a {
 
     color: #62954b;
@@ -179,6 +190,7 @@ a {
 h2{
 
     color: #3b5b93 ;
+    font-weight: 500;
     
 }
 
@@ -190,9 +202,42 @@ time{
 
 }
 
+#Arriba{
+
+    position: relative;
+    width: 100%;
+    padding: 10px;
+
+}
+
+#Arriba p{
+
+    width: 90% ;
+
+}
+
+#ArticuloIzq{
+
+    position: relative;
+    padding: 5px;
+    float: left;
+    width: 45%;
+
+}
+
+#ArticuloDcha{
+
+    position: relative;
+    float: right;
+    padding: 5px;
+    left: -25px;
+    width: 45%;
+}
+
 #Fotos{
 
     position: relative;
+    display: inline;
     width: 50%;
 
 }
@@ -200,6 +245,7 @@ time{
 #Fotos > img {
 
     position: relative;
+    padding: 5px;
 
 }
 
@@ -211,27 +257,86 @@ aside{
 
 }
 
+
+
 h3{
 
+    position: relative;
     color: #62954b;
+    padding: 10px;
+    font-weight: 500;
 
 }
 
 #info{
 
     position: relative;
+    float: left;
+    padding: 5px;
+
+}
+
+#info img {
+
+    position: relative;
+    float: left;
+    width: 50px;
+
+}
+
+#info p{
+
+    position: relative;
+    padding: 2px;
+    width: 75%;
+    float: right;
+    font-size: small;
 
 }
 
 #Categorias{
 
     position: relative;
+    padding: 5px;
+
+}
+
+#Categorias img{
+
+    position: relative;
+    margin: 0 10px;
+    float: left;
+
+}
+
+#Categorias li{
+
+    position: relative;
+    color:#073a64;
+    text-decoration: underline;
 
 }
 
 #Archivo{
 
     position: relative;
+    padding: 5px;
+
+}
+
+#Archivo img{
+
+    position: relative;
+    margin: 0 10px;
+    float: left;
+
+}
+
+#Archivo li{
+
+    position: relative;
+    color:#073a64;
+    text-decoration: underline;
 
 }
 
@@ -251,7 +356,7 @@ footer > small{
 
 }
 
-footer small a {
+footer > small > a {
 
     color: #35728a;
 
