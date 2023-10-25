@@ -144,12 +144,11 @@ nav > ul > li > a{
 #TituloPortada{
 
     position: absolute;
-    top: 190px;
+    top: 120px;
     left: 40px;
     z-index: 0;
     color: #102131;
-    font-size:larger;
-    font-weight: 550;
+    font-weight: 400;
 
 }
 
@@ -157,15 +156,15 @@ nav > ul > li > a{
 
     position: relative;
     top: -4px;
+    float: left;
     background-color: white;
 
 }
 
-main{
+#Articulos{
 
     position: relative;
-    /* background-color: white;
-    float: left; */
+    float: left;
     width: 70%;
 
 }
@@ -191,29 +190,6 @@ time{
 
 }
 
-#Primario{
-
-    position: relative;
-
-}
-
-#Primario > article{
-
-    position: relative;
-
-}
-
-#Secundario{
-
-    position: relative;
-}
-
-#Secundario > article{
-
-    position: relative;
-
-}
-
 #Fotos{
 
     position: relative;
@@ -230,8 +206,7 @@ time{
 aside{
 
     position: relative;
-    /* background-color: white;
-    float: right; */
+    float: right;
     width: 30%;
 
 }
@@ -264,15 +239,21 @@ footer{
 
     position: relative;
     top: -4px;
+    width: 100%;
+    float: left;
     background-color: #0f2132;
-    height: 50px;
-
 
 }
 
 footer > small{
 
-    color: white;
+    color: #35728a;
+
+}
+
+footer small a {
+
+    color: #35728a;
 
 }
 
@@ -289,11 +270,5 @@ footer > small{
     position: relative;
     float: right;
     padding: 17.5px;
-
-}
-
-footer > small > a {
-
-    color: white;
 
 }
