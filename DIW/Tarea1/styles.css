@@ -7,17 +7,19 @@
 }
 
 body {
+ 
     background: linear-gradient(to right, #ff5e62, #ff9966);
     background-color: #ff5e62; /* Para navegadores antiguos */
+
 }
 
 .contenedor {
 
-    max-width: 1000px;
     background-color: white;
-    margin: 0  auto;
     display: flex;
-    flex-direction: column;
+    flex-direction:column; 
+    max-width: 1000px;
+    margin: auto;
 
 }
 
@@ -25,44 +27,100 @@ header {
 
     background-color: #13a2f1;
     display: flex;
-    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 20px;
+
+}
+
+header > nav > ul{
+
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+header > nav > ul > li{
+
+    padding: 5px;
+
+}
+
+#contenido{
+
+    padding: 15px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 main {
 
     display: flex;
+    flex-direction: row;
+    
 
 }
 
-#Servicio1{
+#Servicio1 > h2{
 
-    background-color: #ff5e62;
+    background-color: #e73e3b;
+    padding: 10px 35px;
 
 }
 
-#Servicio2{
+#Servicio2 > h2{
 
     background-color: #9200a7;
+    padding: 10px 35px;
 
 }
 
-#Servicio3{
+#Servicio3 > h2{
 
     background-color: #4645b2;
+    padding: 10px 35px;
 
 }
 
 aside {
 
     background-color: #13a2f1;
+    padding: 15px 45px;
     display: flex;
+    flex-direction: column;
 
+}
+
+aside > h2{
+
+    display: flex;
+    padding: 5px 40px;
+
+}
+
+aside > ul > li{
+
+    color: black;
+
+}
+
+aside > ul > li > a{
+
+    margin: 10px;
+    color: #2837eb;
 
 }
 
 footer {
 
     background-color: #9200a7;
+    padding: 30px;
+    margin: 20px;
     display: flex;
+    justify-content: center;
 
 }
