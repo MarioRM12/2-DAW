@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    color: white ;
+}
+
+body {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    background-color: #ff5e62; /* Para navegadores antiguos */
+}
+
+.contenedor {
+
+    max-width: 1000px;
+    background-color: white;
+    margin: 0  auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+
+    background-color: #13a2f1;
+    display: flex;
+    
+}
+
+main {
+
+    display: flex;
+
+}
+
+#Servicio1{
+
+    background-color: #ff5e62;
+
+}
+
+#Servicio2{
+
+    background-color: #9200a7;
+
+}
+
+#Servicio3{
+
+    background-color: #4645b2;
+
+}
+
+aside {
+
+    background-color: #13a2f1;
+    display: flex;
+
+
+}
+
+footer {
+
+    background-color: #9200a7;
+    display: flex;
+
+}
