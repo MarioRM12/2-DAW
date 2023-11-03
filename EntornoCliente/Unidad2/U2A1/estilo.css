@@ -1,0 +1,9 @@
+/* Estilo para campos inválidos */
+input:invalid, textarea:invalid {
+border: 1px solid red;
+}
+
+/* Estilo para campos válidos */
+input:valid, textarea:valid {
+border: 1px solid green;
+}
