@@ -34,11 +34,11 @@ Utilizar clases CSS para indicar los campos que no pasan la validación. -->
 
   <body>
     <h1>Tarea 2: Validación</h1>
-    <form id="miFormulario" onsubmit="return validarFormulario()">
+    <form id="miFormulario">
       <h2>Envíe sus comentarios</h2>
       <ul>
         <li>
-          <label for="uname">Nombre de usuario (entre 5 y 20 caracteres):</label>
+          <label for="uname">Nombre de usuario (Ejemplo = "a.aaa"):</label>
           <input type="text" name="uname" id="uname" required minlength="5" maxlength="20">
           <div class="col-2" id="NombreError">
             <span class="error"></span>
@@ -53,7 +53,7 @@ Utilizar clases CSS para indicar los campos que no pasan la validación. -->
         </li>
         <li>
           <label for="phone">Teléfono (máximo 15 dígitos):</label>
-          <input type="text" name="phone" id="phone" pattern="\d{1,15}" required>
+          <input type="text" name="phone" id="phone" required>
           <div class="col-2" id="PhoneError">
             <span class="error"></span>
           </div>
@@ -63,12 +63,12 @@ Utilizar clases CSS para indicar los campos que no pasan la validación. -->
           <textarea name="comment" id="comment" maxlength="200"></textarea>
         </li>
         <li>
-          <button type="submit">Enviar comentario</button>
+          <button type="submit" id="submit">Enviar comentario</button>
         </li>
       </ul>
     </form>
 
-    <link rel="Javascript" href="app.js">
+    <script src="app.js"></script>
   </body>
 
 </html>

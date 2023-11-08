@@ -8,6 +8,10 @@ input:valid, textarea:valid {
 border: 1px solid green;
 }
 
+li{
+  display: flex;
+}
+
 .requerido {
     color:#900;
     font-size:smaller;
@@ -16,8 +20,7 @@ border: 1px solid green;
 input[type="email"] {
     -webkit-appearance: none;
     appearance: none;
-  
-    width: 100%;
+
     border: 1px solid #333;
     margin: 0;
   
