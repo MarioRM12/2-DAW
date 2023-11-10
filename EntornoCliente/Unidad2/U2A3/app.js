@@ -1,30 +1,35 @@
 const form = document.getElementById("myForm");
 const email = document.getElementById("mail");
-const emailError = document.getElementById("emailError");
 
-form.addEventListener("submit", function (event) {
-if (!email.checkValidity()) {
-    event.preventDefault();
-    validateEmail();
-}
-});
+form.addEventListener("submit", validateEmail);
 
-function validateEmail() {
+function validateEmail(event) {
     
+    let test = true;
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     if (email.validity.valueMissing) {
-        emailError.textContent = "Please enter an email address.";
+        email.setCustomValidity("El email es obligatorio");
+        test = false;
     } else if (email.validity.tooShort) {
-        emailError.textContent = "Email address must be at least 10 characters.";
-    } else if (email.validity.typeMismatch) {
-        emailError.textContent = "Please enter a valid email address.";
+        email.setCustomValidity("El email debe contener al menos 10 caracteres");
+        test = false;
+    } else if (!emailRegex.test(email.value)) {
+        email.setCustomValidity("El email debe ser de este formato: a@a.aa");
+        test = false;
     } else {
-        // Additional custom validation for email format
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailRegex.test(email.value)) {
-        emailError.textContent = "Please enter a valid email address.";
-        } else {
-        // Clear error message if all conditions are met
-        emailError.textContent = "";
-        }
+        email.setCustomValidity("");
+        test = true;
     }
+
+    // Decidir si enviar el formulario
+    if (!test) {
+        event.preventDefault();
+    }
+
+    if (test) {
+        alert("Se ha enviado correctamente");
+    }
+
+    return test;
 }

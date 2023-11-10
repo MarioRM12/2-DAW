@@ -72,13 +72,12 @@ function validanumero() {
         numero.setCustomValidity("El numero es obligatorio");
         test = false;
 
-    }else if (!regex.test(numero.value)) {
+    } else if (!regex.test(numero.value)) {
         
         numero.setCustomValidity("El numero debe tener alguno de estos formatos: '333-333-3333' , '333.333.3333' , '333 333 3333' , '3333333333'");
         test = false;
 
-    }
-     else if (numero.validity.rangeOverflow) {
+    } else if (numero.validity.rangeOverflow) {
 
         numero.setCustomValidity("El numero es damasiado grande");
         test = false;
