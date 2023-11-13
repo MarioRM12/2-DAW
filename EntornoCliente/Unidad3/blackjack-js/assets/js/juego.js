@@ -15,8 +15,9 @@ var jugadorCartas = document.getElementById("jugador-cartas");
 var computadoraCartas = document.getElementById("computadora-cartas");
 
 // Arreglo con las cartas
-
 let cartas = [];
+
+
 
 // Cartas numéricas del 2 al 10
 for (let i = 2; i <= 10; i++) {
@@ -70,4 +71,4 @@ btnPedir.addEventListener("click", function () {
 btnDetener.addEventListener("click", function () {
     // Implementa la lógica para detener el juego
     // ...
-});
+});g
