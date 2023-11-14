@@ -1,74 +1,114 @@
-/**
- * 2C = Two of Clubs
- * 2D = Two of Diamonds
- * 2H = Two of Hearts
- * 2S = Two of Spades
- */
-
-
-var btnNuevo = document.getElementById("btnNuevo");
-var btnPedir = document.getElementById("btnPedir");
-var btnDetener = document.getElementById("btnDetener");
-var jugadorPuntos = document.querySelector("#jugador h1 small");
-var computadoraPuntos = document.querySelector("#computadora h1 small");
-var jugadorCartas = document.getElementById("jugador-cartas");
-var computadoraCartas = document.getElementById("computadora-cartas");
+// Constantes de html
+const btnNuevo = document.getElementById("btnNuevo");
+const btnPedir = document.getElementById("btnPedir");
+const btnDetener = document.getElementById("btnDetener");
+const jugadorPuntos = document.querySelector("h1 small");
+const computadoraPuntos = document.querySelector("#computadora h1 small");
+const jugadorCartas = document.getElementById("jugador-cartas");
+const computadoraCartas = document.getElementById("computadora-cartas");
 
 // Arreglo con las cartas
 let cartas = [];
 
+// Funciones generales
+
+    // Funcion para barajar las cartas.
+    function barajar() {
+
+        cartas = _.shuffle(cartas);
+
+    }
+
+    //Funcion para rellenar la baraja con todas las cartas.
+    function rellenarBaraja(baraja) {
+
+        // Cartas numéricas del 2 al 10
+        for (let i = 2; i <= 10; i++) {
+            baraja.push(i + "C", i + "D", i + "H", i + "S");
+        }
+        
+        // Cartas con letras (J, Q, K, A)
+        let letras = ["J", "Q", "K", "A"];
+        for (let j = 0; j < letras.length; j++) {
+            baraja.push(letras[j] + "C", letras[j] + "D", letras[j] + "H", letras[j] + "S");
+        }
+
+    }
+
+    // Función para calcular los puntos de un jugador
+    function calcularPuntos(cartasJugador) {
+        // Implementa la lógica para calcular los puntos según las reglas dadas
+        // ...
+
+        // Devuelve la cantidad de puntos calculados
+        return puntos;
+    }
+
+    //a
+    function insertarimagen() {
+        
+        //<img class="carta" src="assets/cartas/
+
+    }
 
 
-// Cartas numéricas del 2 al 10
-for (let i = 2; i <= 10; i++) {
-  cartas.push(i + "C", i + "D", i + "H", i + "S");
-}
+//Funciones principales para el juego
 
-// Cartas con letras (J, Q, K, A)
-let letras = ["J", "Q", "K", "A"];
-for (let j = 0; j < letras.length; j++) {
-  cartas.push(letras[j] + "C", letras[j] + "D", letras[j] + "H", letras[j] + "S");
-}
+    // Funcion para boton pedir juego
+    function nuevoJuego() {
+        
+        //Vaciamos la baraja
+        cartas = [];
 
-// Función para barajar las cartas
-function barajar() {
-    cartas = _.shuffle(cartas);
-}
+        //Rellenamos la baraja de nuevo
+        rellenarBaraja(cartas);
+        
+        // Barajo las cartas
+        barajar();
 
-// Función para calcular los puntos de un jugador
-function calcularPuntos(cartasJugador) {
-    // Implementa la lógica para calcular los puntos según las reglas dadas
-    // ...
+        // Vaciamos la mesa de juego
+        jugadorCartas.innerHTML = "";
+        computadoraCartas.innerHTML = "";
 
-    // Devuelve la cantidad de puntos calculados
-    return puntos;
-}
+    }
 
-// Función para mostrar una carta en el HTML
-function mostrarCarta(carta, contenedor) {
-    // Implementa la lógica para mostrar la carta en el contenedor
-    // ...
-}
+    // Funcion para boton pedir carta
+    function pedirCarta() {
 
-// Función para iniciar un nuevo juego
-function nuevoJuego() {
-    // Reinicia las variables y la interfaz gráfica
-    // ...
-}
+        // Sacamos la carta del array
+        let cartaSacada = cartas.pop();
 
-// Función para manejar el clic en el botón "Nuevo Juego"
-btnNuevo.addEventListener("click", function () {
-    nuevoJuego();
-});
+        // Creamos la imagen
+        let nuevaImagenCarta = document.createElement('img');
+        nuevaImagenCarta.classList.add('carta');
+        nuevaImagenCarta.src = `assets/cartas/${cartaSacada}.png`;
+        jugadorCartas.append(nuevaImagenCarta);
 
-// Función para manejar el clic en el botón "Pedir carta"
-btnPedir.addEventListener("click", function () {
-    // Implementa la lógica para pedir una carta
-    // ...
-});
+        // Calculamos los puntos de la carta sacada
+        let valorCarta = cartaSacada.slice(0, -1);
 
-// Función para manejar el clic en el botón "Detener"
-btnDetener.addEventListener("click", function () {
-    // Implementa la lógica para detener el juego
-    // ...
-});g
+        if (valorCarta == "J" || valorCarta == "Q" || valorCarta == "K") {
+            valorCarta = 10;
+        } else if (valorCarta == "A") {
+            valorCarta = 11;
+        }
+
+        jugadorPuntos.innerText = +valorCarta;
+
+    }
+
+    // Funcion para boton detener
+    function detener() {
+        
+    }
+
+//Añadimos las funciones al los botones
+
+    // Función para manejar el clic en el botón "Nuevo Juego"
+    btnNuevo.addEventListener("click",nuevoJuego);
+
+    // Función para manejar el clic en el botón "Pedir carta"
+    btnPedir.addEventListener("click",pedirCarta);
+
+    // Función para manejar el clic en el botón "Detener"
+    btnDetener.addEventListener("click",detener);
