@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+    color: white;
+}
+
+body{
+
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    background-color: #ff5e62; /* Para navegadores antiguos */
+
+}
+
+main{
+
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: white;
+
+}
+
+ul{
+
+    background-color: #4645b2;
+    text-align: center;
+
+}
+
+li{
+
+    list-style: none;
+
+}
+
+/*-----------------MENU SENCILLO-----------------*/
+
+
+
+
+
+/*-----------------CON ICONOS-----------------*/
+
+
+
+
+
+
+/*-----------------DROPDOWN MENU-----------------*/
+
+
+
+
+
+/*-----------------REDES SOCIALES-----------------*/
+
+
+
+
+/*-----------------MENU SENCILLO-----------------*/
+
+
+@media (min-width: 468px) {
+    
+}
