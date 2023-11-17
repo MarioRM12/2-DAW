@@ -3,12 +3,15 @@ const btnNuevo = document.getElementById("btnNuevo");
 const btnPedir = document.getElementById("btnPedir");
 const btnDetener = document.getElementById("btnDetener");
 const jugadorPuntos = document.querySelector("h1 small");
-const computadoraPuntos = document.querySelector("#computadora h1 small");
+const computadoraPuntos = document.getElementById("PuntosComp");
 const jugadorCartas = document.getElementById("jugador-cartas");
 const computadoraCartas = document.getElementById("computadora-cartas");
 
 // Arreglo con las cartas
 let cartas = [];
+// Acumuladores de puntos
+let acuPuntosJugador = 0;
+let acuPuntosComputador = 0;
 
 // Funciones generales
 
@@ -35,30 +38,26 @@ let cartas = [];
 
     }
 
-    // Función para calcular los puntos de un jugador
-    function calcularPuntos(cartasJugador) {
-        // Implementa la lógica para calcular los puntos según las reglas dadas
-        // ...
-
-        // Devuelve la cantidad de puntos calculados
-        return puntos;
-    }
-
-    //a
-    function insertarimagen() {
-        
-        //<img class="carta" src="assets/cartas/
-
-    }
-
 
 //Funciones principales para el juego
 
     // Funcion para boton pedir juego
     function nuevoJuego() {
+
+        // Función para manejar el clic en el botón "Pedir carta"
+        btnPedir.addEventListener("click",pedirCarta);
+
+        // Función para manejar el clic en el botón "Detener"
+        btnDetener.addEventListener("click",detener);
         
         //Vaciamos la baraja
         cartas = [];
+
+        //Reiniciamos los puntos
+        acuPuntosJugador = 0;
+        acuPuntosComputador = 0;
+        jugadorPuntos.innerText = acuPuntosJugador;
+        computadoraPuntos.innerText = acuPuntosComputador;
 
         //Rellenamos la baraja de nuevo
         rellenarBaraja(cartas);
@@ -75,31 +74,90 @@ let cartas = [];
     // Funcion para boton pedir carta
     function pedirCarta() {
 
-        // Sacamos la carta del array
-        let cartaSacada = cartas.pop();
+        if (cartas.length == 0) {
+            alert("Debes iniciar una nueva partida");
+        }else if (acuPuntosJugador <= 20) {
 
-        // Creamos la imagen
-        let nuevaImagenCarta = document.createElement('img');
-        nuevaImagenCarta.classList.add('carta');
-        nuevaImagenCarta.src = `assets/cartas/${cartaSacada}.png`;
-        jugadorCartas.append(nuevaImagenCarta);
+            // Sacamos la carta del array
+            let cartaSacada = cartas.pop();
 
-        // Calculamos los puntos de la carta sacada
-        let valorCarta = cartaSacada.slice(0, -1);
+            // Creamos la imagen
+            let nuevaImagenCarta = document.createElement('img');
+            nuevaImagenCarta.classList.add('carta');
+            nuevaImagenCarta.src = `assets/cartas/${cartaSacada}.png`;
+            jugadorCartas.append(nuevaImagenCarta);
 
-        if (valorCarta == "J" || valorCarta == "Q" || valorCarta == "K") {
-            valorCarta = 10;
-        } else if (valorCarta == "A") {
-            valorCarta = 11;
+            // Calculamos los puntos de la carta sacada
+            let valorCarta = cartaSacada.slice(0, -1);
+
+            if (valorCarta == "J" || valorCarta == "Q" || valorCarta == "K") {
+                valorCarta = 10;
+            } else if (valorCarta == "A") {
+                valorCarta = 11;
+            }
+
+            acuPuntosJugador += +valorCarta;
+
+            jugadorPuntos.innerText = acuPuntosJugador;
+
+        }else{
+            detener();
         }
 
-        jugadorPuntos.innerText = +valorCarta;
 
     }
 
     // Funcion para boton detener
     function detener() {
+
+        // Función para manejar el clic en el botón "Pedir carta"
+        btnPedir.removeEventListener("click",pedirCarta);
+
+        // Función para manejar el clic en el botón "Detener"
+        btnDetener.removeEventListener("click",detener);
+
+        if (acuPuntosJugador > 21) {
+            setTimeout(() => alert("Ha ganado la computadora"),300);
+        }else if (acuPuntosJugador == 21) {
+            setTimeout(() => alert("Has Ganado pedazo de espabilado"),300);
+        }else{
+
+            while (acuPuntosJugador > acuPuntosComputador && acuPuntosComputador < 21 ) {
+            
+                // Sacamos la carta del array
+                let cartaSacada = cartas.pop();
+    
+                // Creamos la imagen
+                let nuevaImagenCarta = document.createElement('img');
+                nuevaImagenCarta.classList.add('carta');
+                nuevaImagenCarta.src = `assets/cartas/${cartaSacada}.png`;
+                computadoraCartas.append(nuevaImagenCarta);
+    
+                // Calculamos los puntos de la carta sacada
+                let valorCarta = cartaSacada.slice(0, -1);
+    
+                if (valorCarta == "J" || valorCarta == "Q" || valorCarta == "K") {
+                    valorCarta = 10;
+                } else if (valorCarta == "A") {
+                    valorCarta = 11;
+                }
+    
+                acuPuntosComputador += +valorCarta;
+    
+                computadoraPuntos.innerText = acuPuntosComputador;
+    
+            }
+
+        }
         
+        if (acuPuntosComputador > acuPuntosJugador && acuPuntosComputador < 21) {
+            setTimeout(() => alert("Ha ganado la computadora"),300);
+        }else if (acuPuntosComputador < acuPuntosJugador && acuPuntosJugador < 21 || acuPuntosComputador > 21) {
+            setTimeout(() => alert("Has Ganado pedazo de espabilado"),300);
+        }else if (acuPuntosComputador == acuPuntosJugador ) {
+            setTimeout(() => alert("Habeis empatado, por tanto gana la casa"),300);
+        }
+
     }
 
 //Añadimos las funciones al los botones
