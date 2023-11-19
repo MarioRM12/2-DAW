@@ -100,6 +100,17 @@ let acuPuntosComputador = 0;
 
             jugadorPuntos.innerText = acuPuntosJugador;
 
+            if (acuPuntosJugador >= 21) {
+                detener();
+
+                // Función para manejar el clic en el botón "Pedir carta"
+                btnPedir.removeEventListener("click",pedirCarta);
+
+                // Función para manejar el clic en el botón "Detener"
+                btnDetener.removeEventListener("click",detener);
+                
+            }
+
         }else{
             detener();
         }
@@ -116,10 +127,37 @@ let acuPuntosComputador = 0;
         // Función para manejar el clic en el botón "Detener"
         btnDetener.removeEventListener("click",detener);
 
+        // Hacemos el filtrado correspondiente de las casuisticas
         if (acuPuntosJugador > 21) {
-            setTimeout(() => alert("Ha ganado la computadora"),300);
+
+            // Sacamos la carta del array
+            let cartaSacada = cartas.pop();
+
+            // Creamos la imagen
+            let nuevaImagenCarta = document.createElement('img');
+            nuevaImagenCarta.classList.add('carta');
+            nuevaImagenCarta.src = `assets/cartas/${cartaSacada}.png`;
+            computadoraCartas.append(nuevaImagenCarta);
+
+            // Calculamos los puntos de la carta sacada
+            let valorCarta = cartaSacada.slice(0, -1);
+
+            if (valorCarta == "J" || valorCarta == "Q" || valorCarta == "K") {
+                valorCarta = 10;
+            } else if (valorCarta == "A") {
+                valorCarta = 11;
+            }
+
+            acuPuntosComputador += +valorCarta;
+    
+            computadoraPuntos.innerText = acuPuntosComputador;
+
+            setTimeout(() => alert("Ha ganado la computadora. \nPulse 'Nuevo Juego' para empezar otra partida"),300);
+
         }else if (acuPuntosJugador == 21) {
+
             setTimeout(() => alert("Has Ganado pedazo de espabilado"),300);
+
         }else{
 
             while (acuPuntosJugador > acuPuntosComputador && acuPuntosComputador < 21 ) {
@@ -150,12 +188,13 @@ let acuPuntosComputador = 0;
 
         }
         
-        if (acuPuntosComputador > acuPuntosJugador && acuPuntosComputador < 21) {
-            setTimeout(() => alert("Ha ganado la computadora"),300);
+        // Determinamos el ganador
+        if (acuPuntosComputador > acuPuntosJugador && acuPuntosComputador <= 21) {
+            setTimeout(() => alert("Ha ganado la computadora. \nPulse 'Nuevo Juego' para empezar otra partida"),300);
         }else if (acuPuntosComputador < acuPuntosJugador && acuPuntosJugador < 21 || acuPuntosComputador > 21) {
-            setTimeout(() => alert("Has Ganado pedazo de espabilado"),300);
+            setTimeout(() => alert("Has Ganado pedazo de espabilado. \nPulse 'Nuevo Juego' para empezar otra partida"),300);
         }else if (acuPuntosComputador == acuPuntosJugador ) {
-            setTimeout(() => alert("Habeis empatado, por tanto gana la casa"),300);
+            setTimeout(() => alert("Habeis empatado, por tanto gana la casa. \nPulse 'Nuevo Juego' para empezar otra partida"),300);
         }
 
     }
