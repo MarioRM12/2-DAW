@@ -1,9 +1,20 @@
+/*--------- General ---------*/
+
 *{
+
     margin: 0;
     padding: 0;
     border: 0;
     
     color: white;
+    text-transform: capitalize;
+    
+}
+
+h1{
+
+    color: black;
+
 }
 
 body{
@@ -21,6 +32,12 @@ main{
 
 }
 
+nav{
+
+    background-color: #4645b2;
+
+}
+
 ul{
 
     background-color: #4645b2;
@@ -34,33 +51,197 @@ li{
 
 }
 
+li:hover{
+
+    background-color: #1a2770;
+
+}
+
+#nosotrosUL{
+
+    background-color: #ff5e62;
+
+}
+
+#tiendaUL{
+
+    background-color: #ff5e62;
+
+}
+
 /*-----------------MENU SENCILLO-----------------*/
 
+#menuSencillo li{
 
+    padding: 10px 20px;
 
-
+}
 
 /*-----------------CON ICONOS-----------------*/
 
+#conIconos{
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
 
+#conIconos li{
 
+    display: flex;
+    padding: 10px;
 
-/*-----------------DROPDOWN MENU-----------------*/
-
-
-
-
+}
 
 /*-----------------REDES SOCIALES-----------------*/
 
+#redesSociales{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#redesSociales li{
+
+    margin: 10px;
+
+}
 
 
+/*-----------------Con Redes Sociales-----------------*/
 
-/*-----------------MENU SENCILLO-----------------*/
+#dropdownMenuConRedes{
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#iconos{
+
+    display: flex;
+
+}
+
+#iconos li{
+
+    margin: 10px;
+
+}
+
+/*----- TABLET -----*/
 
 @media (min-width: 468px) {
+
+    /*-----------------CON ICONOS-----------------*/
+
+    #conIconos{
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
     
+}
+
+/*----- PC -----*/
+
+@media (min-width: 768px) {
+
+    /*-----------------MENU SENCILLO-----------------*/
+
+    #menuSencillo{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    #menuSencillo li{
+    
+        padding: 20px 35px;
+
+    }
+
+
+    /*-----------------CON ICONOS-----------------*/
+
+    #conIconos{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    #conIconos li{
+    
+        display: flex;
+        flex-direction: column;
+        padding: 20px 35px;
+
+    }
+
+    /*-----------------DROPDOWN MENU-----------------*/
+
+    #dropdownMenu{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    #dropdownMenu > li{
+
+        position: relative;
+        padding: 10px 20px;
+        width: 25%;
+
+    }
+
+    #dropdownMenu li{
+
+        position: relative;
+        padding: 10px 20px;
+
+    }
+
+    #dropdownMenu > li:hover #nosotrosUL{
+
+        display: inline-block;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+    }
+
+    #dropdownMenu > li:hover #tiendaUL{
+
+        display: inline-block;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+    }
+
+    #nosotrosUL{
+
+        position: absolute;
+        display: none;
+
+    }
+
+    #tiendaUL{
+
+        position: absolute;
+        display: none;
+
+    }
 }
