@@ -27,6 +27,7 @@ body{
 main{
 
     margin: 0 auto;
+    padding: 15px;
     max-width: 1000px;
     background-color: white;
 
@@ -57,44 +58,72 @@ li:hover{
 
 }
 
+#nosotros:hover #nosotrosUL{
+
+    background-color: #1a2770;
+
+}
+
 #nosotrosUL{
 
+    background-color: #4645b2;
+
+}
+
+#nosotrosUL > li:hover{
+
     background-color: #ff5e62;
+
+}
+
+#tienda:hover #tiendaUL{
+
+    background-color: #1a2770;
 
 }
 
 #tiendaUL{
 
+    background-color: #4645b2;
+
+}
+
+#tiendaUL > li:hover{
+
     background-color: #ff5e62;
 
 }
 
-/*-----------------MENU SENCILLO-----------------*/
+/*----------------- MENU SENCILLO -----------------*/
 
-#menuSencillo li{
+#menuSencillo > li{
 
     padding: 10px 20px;
 
 }
 
-/*-----------------CON ICONOS-----------------*/
+/*----------------- CON ICONOS -----------------*/
 
 #conIconos{
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+}
+
+#conIconos #texto{
+
+    display: none;
 
 }
 
 #conIconos li{
 
-    display: flex;
-    padding: 10px;
+    padding: 10px 20px;
 
 }
 
-/*-----------------REDES SOCIALES-----------------*/
+/*----------------- REDES SOCIALES -----------------*/
 
 #redesSociales{
 
@@ -105,12 +134,20 @@ li:hover{
 
 #redesSociales li{
 
-    margin: 10px;
+    padding: 10px;
 
 }
 
+/*----------------- DropdownMenu -----------------*/
 
-/*-----------------Con Redes Sociales-----------------*/
+#dropdownMenu li{
+    
+    text-align: start;
+    padding: 10px 20px;
+
+}
+
+/*----------------- Con Redes Sociales -----------------*/
 
 #dropdownMenuConRedes{
 
@@ -120,30 +157,53 @@ li:hover{
     
 }
 
+#dropdownmenu2 li{
+
+    padding: 10px 20px;
+    
+}
+
 #iconos{
 
     display: flex;
+    align-items: flex-start;
 
 }
 
 #iconos li{
 
-    margin: 10px;
+    padding: 10px;
 
 }
 
 /*----- TABLET -----*/
 
-@media (min-width: 468px) {
+@media (min-width: 480px) {
 
-    /*-----------------CON ICONOS-----------------*/
+    /*----------------- CON ICONOS -----------------*/
 
     #conIconos{
 
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
 
+    }
+
+    #conIconos li{
+
+        display: flex;
+        flex: 1 0 50%;
+
+
+    }
+
+    #conIconos #texto{
+        
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
     }
     
 }
@@ -152,7 +212,7 @@ li:hover{
 
 @media (min-width: 768px) {
 
-    /*-----------------MENU SENCILLO-----------------*/
+    /*----------------- MENU SENCILLO -----------------*/
 
     #menuSencillo{
 
@@ -169,7 +229,7 @@ li:hover{
     }
 
 
-    /*-----------------CON ICONOS-----------------*/
+    /*----------------- CON ICONOS -----------------*/
 
     #conIconos{
 
@@ -182,12 +242,18 @@ li:hover{
     #conIconos li{
     
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding: 20px 35px;
 
     }
 
-    /*-----------------DROPDOWN MENU-----------------*/
+    #conIconos p{
+    
+        text-align: start;
+
+    }
+
+    /*----------------- DROPDOWN MENU -----------------*/
 
     #dropdownMenu{
 
@@ -202,7 +268,7 @@ li:hover{
 
         position: relative;
         padding: 10px 20px;
-        width: 25%;
+        flex-grow: 1;
 
     }
 
@@ -235,6 +301,7 @@ li:hover{
 
         position: absolute;
         display: none;
+        background-color: #ff5e62;
 
     }
 
@@ -242,6 +309,17 @@ li:hover{
 
         position: absolute;
         display: none;
+        background-color: #ff5e62;
 
     }
+
+    /*----------------- DROPDOWN MENU CON REDES-----------------*/
+
+    #dropdownmenu2{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
 }
