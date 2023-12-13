@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  margin: 16px;
+}
+header .ContenidoHeader {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 16px;
+}
+header #MenuCarrito {
+  display: none;
+  width: 35%;
+}
+header #MenuCarrito:hover > #carrito {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+#Banner {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+}
+#Banner > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#Banner #Buscador {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+#Info {
+  display: flex;
+  background-color: linear-gradient(to right, #741d51, #e34d52);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+main h2 {
+  display: flex;
+  align-self: center;
+}
+main #Cursos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main #Cursos .Curso {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+  border: gray 0.5px;
+  flex: 1 0 calc(100% - 16px);
+}
+@media (max-width: 280px) {
+  main #Cursos .Curso {
+    flex: 1 0 calc(50% - 16px);
+  }
+}
+@media (min-width: 480px) {
+  main #Cursos .Curso {
+    flex: 0 0 calc(33.3333333333% - 16px);
+  }
+}
+@media (min-width: 768px) {
+  main #Cursos .Curso {
+    flex: 0 0 calc(25% - 16px);
+  }
+}
+main #Cursos .Curso img {
+  width: 100%;
+}
+main #Cursos .Curso .Boton {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+}
+main #Cursos .Curso h3, main #Cursos .Curso p, main #Cursos .Curso img, main #Cursos .Curso div {
+  margin-bottom: 16px;
+}
+main #Cursos .Curso #Estrellas {
+  display: flex;
+  align-self: flex-start;
+}
+main #Cursos .Curso .Precio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main #Cursos .Curso .Precio small {
+  text-decoration: line-through;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+}
+footer .container {
+  display: flex;
+  flex-grow: 1;
+}
+footer .container div {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+footer .container div a {
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 768px) {
+  footer .container div {
+    flex: 0 0 calc(25% - 16px);
+  }
+}/*# sourceMappingURL=styles.css.map */

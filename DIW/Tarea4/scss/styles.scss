@@ -1,0 +1,219 @@
+// Imports
+@import "_mixins.scss";
+@import "_variables.scss";
+
+// *
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+// Body
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+// CLASS Container
+
+.container{
+    @include desktop{
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+
+// Header
+
+header{
+
+    @include contenedor;
+
+    display: flex;
+    position: relative;
+    margin: $margen;
+
+    .ContenidoHeader{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        padding: $margen;
+    }
+
+    #MenuCarrito {
+        display: none;
+        width: 35%;
+    }
+
+    #MenuCarrito:hover > #carrito{
+        display: block;
+        position: absolute;
+        top: 100%;
+    }
+
+    @include desktop{
+        
+    }
+
+}
+
+// Banner
+
+#Banner{
+
+    > *{
+        @include contenedor;
+    }
+
+    display: flex;
+    flex-direction: row;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: $color-blanco;
+
+    #Buscador{
+
+        display: flex;
+        flex-direction: row;
+        background-color: $color-blanco;
+
+    }
+
+}
+
+//Info
+
+#Info{
+
+    display: flex;
+    background-color: linear-gradient(to right, #741d51, #e34d52);
+
+
+}
+
+// Main
+
+main{
+
+    // VALORES DEL MAIN
+
+    display: flex;
+    flex-direction: column;
+    padding: $margen;
+
+    // TITULO APARTADO
+    h2{
+        display: flex;
+        align-self: center;
+    }
+
+    // APARTADO DE CURSOS
+    #Cursos{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        // VALORES DE CADA CURSO INDIVIDUAL
+        .Curso{
+
+            display: flex;
+            flex-direction: column;
+            margin: $margen 0;
+            border: gray 0.5px;
+
+            // 1 SOLO ARTICULO PARA DEBAJO DE LAS RESOLUCIONES DE MOVIL
+            flex: 1 0 calc(100% - $margen);
+
+            // 2 PARA MOVIL
+            @include mobile { 
+                flex: 1 0 calc(50% - $margen);
+            }
+            
+            // 3 PARA TABLET
+            @include tablet { 
+                flex: 0 0 calc(100%/3 - $margen);
+            }
+
+            // 4 PARA ESCRITORIO
+            @include desktop { 
+                flex: 0 0 calc(100%/4 - $margen);
+            }
+
+            img{ // Para que se adapte al ancho de la caja padre
+                width: 100%;
+            }
+
+            .Boton{
+                @include Boton($color-enlace);
+            }
+
+            h3, p, img, div{
+                margin-bottom: $margen;
+            }
+
+            #Estrellas{
+
+                display: flex;
+                align-self: flex-start
+
+            }
+
+            .Precio{
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                small{ 
+                    text-decoration:line-through;
+                }
+            }
+
+        }
+    }
+}
+
+// Footer
+
+footer{
+
+    display: flex;
+    background-color: $color-negro;
+
+    .container{
+        display: flex;
+        flex-grow: 1;
+
+        div{
+
+            display: flex;
+            flex-direction: column;
+            padding: $margen;
+
+            a{
+
+                text-decoration: none;
+                color: $color-blanco;
+
+            }
+
+            @include desktop{
+
+                flex: 0 0 calc(100%/4 - $margen);
+
+            }
+
+        }
+    }
+}

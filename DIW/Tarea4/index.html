@@ -4,128 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 4</title>
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="scss/styles.css.map">
 </head>
 <body>
-    <header>
-        <img src="img/logo.jpg" alt="Logo">
-        <img src="img/cart.png" alt="Carrito">
+    <header class="container">
+        <div class="ContenidoHeader">
+            <img src="img/logo.jpg" alt="Logo">
+            <img src="img/cart.png" id="Carrito" alt="Carrito">
+            <div id="MenuCarrito">
+                <h4>Imagen</h4>
+                <img src="img/curso1.jpg" alt="">
+                <h4>Nombre</h4>
+                <p>CSS Grid y Flexbox construye + 10 proyectos</p>
+                <h4>Precio</h4>
+                <p>$15</p>
+                <input type="submit" >
+            </div>
+        </div>
     </header>
 
     <div id="Banner">
-        <img src="img/hero.jpg" alt="Background">
-        <h1>Aprende algo nuevo</h1>
-        <small>todos los cursos a $15</small>
-        <input type="text">
-        <img src="img/lupa.png" alt="Boton Buscar">
+        <div class="container">
+            <h1>Aprende algo nuevo</h1>
+            <small>todos los cursos a $15</small>
+            <div id="Buscador">
+                <p>¿Que te gustaría Aprender?</p>
+                <img src="img/lupa.png" alt="Boton Buscar">
+            </div>
+        </div>
     </div>
 
     <div id="Info">
-        <img src="img/icono1.png" alt="Icono1">
-        <p>20.000 Cursos en línea</p>
-        <p>Explora los temas más recientes</p>
-        <img src="img/icono2.png" alt="Icono2">
-        <p>Instructores Expertos</p>
-        <p>Aprende con distintos estilos</p>
-        <img src="img/icono3.png" alt="Icono3">
-        <p>Acceso de por vida</p>
-        <p>Aprende a tu ritmo</p>
+        <div class="container">
+
+            <img class="icono_portada" src="img/icono1.png" alt="bombilla">
+            <div class="texto">
+                <p>200.000 cursos en línea</p>
+                <p>Explora los temas más recientes</p>
+            </div>
+
+            <img class="icono_portada" src="img/icono2.png" alt="bombilla">
+            <div class="texto">
+                <p>Instructores Expertos</p>
+                <p>Aprende con distintos estilos</p>
+            </div>
+
+            <img class="icono_portada" src="img/icono3.png" alt="bombilla">
+            <div class="texto">
+                <p>Acceso de por vida</p>
+                <p>Aprende a tu ritmo</p>
+            </div>
+
+        </div>
     </div>
 
-    <main>
+    <main class="container">
 
         <h2>Cursos En Línea</h2>
 
-        <article>
-            <img src="img/curso1.jpg" alt="cursos1">
-            <h3>HTML5,CSS3,JavaScript para Principiantes</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+        <div id="Cursos">
 
-        <article>
-            <img src="img/curso2.jpg" alt="cursos2">
-            <h3>Curso de comida vegetariana</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso1.jpg" alt="cursos1">
+                <h3>HTML5,CSS3,JavaScript para Principiantes</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
 
-        <article>
-            <img src="img/curso3.jpg" alt="cursos3">
-            <h3>Guitarra para Principiantes</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso2.jpg" alt="cursos2">
+                <h3>Curso de comida vegetariana</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
 
-        <article>
-            <img src="img/curso4.jpg" alt="cursos4">
-            <h3>Huerto en tu casa</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso3.jpg" alt="cursos3">
+                <h3>Guitarra para Principiantes</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <p class="Boton">Agregar al Carrito</p>
+            </article>
 
-        <article>
-            <img src="img/curso5.jpg" alt="cursos5">
-            <h3>Decoracion con productos de tu hogar</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso4.jpg" alt="cursos4">
+                <h3>Huerto en tu casa</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <p class="Boton">Agregar al Carrito</p>
+            </article>
 
-        <article>
-            <img src="img/curso1.jpg" alt="cursos1">
-            <h3>Diseño Web para Principiantes</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso5.jpg" alt="cursos5">
+                <h3>Decoracion con productos de tu hogar</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
 
-        <article>
-            <img src="img/curso2.jpg" alt="cursos2">
-            <h3>Comida Mexicana para principiantes</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso1.jpg" alt="cursos1">
+                <h3>Diseño Web para Principiantes</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
 
-        <article>
-            <img src="img/curso3.jpg" alt="cursos3">
-            <h3>Estudio Musical en tu casa</h3>
-            <small class="autor">Juan Pedro</small>
-            <img src="img/estrellas.png" alt="Puntuacion">
-            <small class="precioInicial">$200</small>
-            <small class="precioFinal">$15</small>
-            <p class="Boton">Agregar al Carrito</p>
-        </article>
+            <article class="Curso">
+                <img src="img/curso2.jpg" alt="cursos2">
+                <h3>Comida Mexicana para principiantes</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
+
+            <article class="Curso">
+                <img src="img/curso3.jpg" alt="cursos3">
+                <h3>Estudio Musical en tu casa</h3>
+                <small class="autor">Juan Pedro</small>
+                <img id="Estrellas" src="img/estrellas.png" alt="Puntuacion">
+                <div class="Precio">
+                    <small class="precioInicial">$200</small>
+                    <small class="precioFinal">$15</small>
+                </div>
+                <a class="Boton">Agregar al Carrito</a>
+            </article>
+
+        </div>
+
 
     </main>
 
     <footer>
-        <a href="#">Para tu Negocio</a>
-        <a href="#">Conviertete en Instructor</a>
-        <a href="#">Aplicaciones Moviles</a>
-        <a href="#">Soporte</a>
-        <a href="#">¿Quienes somos?</a>
-        <a href="#">Temas</a>
-        <a href="#">Empleo</a>
-        <a href="#">Blog</a>
+        <div class="container">
+            <div>
+                <a href="#">Para tu Negocio</a>
+                <a href="#">Conviertete en Instructor</a>
+                <a href="#">Aplicaciones Moviles</a>
+                <a href="#">Soporte</a>
+                <a href="#">Temas</a>
+            </div>
+            <div>
+                <a href="#">¿Quienes somos?</a>
+                <a href="#">Empleo</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
     </footer>
     
 </body>
