@@ -5,8 +5,13 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: sans-serif;
 }
 
@@ -20,14 +25,22 @@ body {
 header {
   max-width: 1200px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   margin: 16px;
 }
 header .ContenidoHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 16px;
 }
 header #MenuCarrito {
@@ -40,8 +53,13 @@ header #MenuCarrito:hover > #carrito {
   top: 100%;
 }
 #Banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-image: url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -53,61 +71,105 @@ header #MenuCarrito:hover > #carrito {
   margin: 0 auto;
 }
 #Banner #Buscador {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: white;
 }
 
 #Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: linear-gradient(to right, #741d51, #e34d52);
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 16px;
 }
 main h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 main #Cursos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 main #Cursos .Curso {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 16px 0;
   border: gray 0.5px;
-  flex: 1 0 calc(100% - 16px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(100% - 16px);
+          flex: 1 0 calc(100% - 16px);
 }
 @media (max-width: 280px) {
   main #Cursos .Curso {
-    flex: 1 0 calc(50% - 16px);
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 16px);
+            flex: 1 0 calc(50% - 16px);
   }
 }
 @media (min-width: 480px) {
   main #Cursos .Curso {
-    flex: 0 0 calc(33.3333333333% - 16px);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.3333333333% - 16px);
+            flex: 0 0 calc(33.3333333333% - 16px);
   }
 }
 @media (min-width: 768px) {
   main #Cursos .Curso {
-    flex: 0 0 calc(25% - 16px);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(25% - 16px);
+            flex: 0 0 calc(25% - 16px);
   }
 }
 main #Cursos .Curso img {
   width: 100%;
 }
 main #Cursos .Curso .Boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 8px 16px;
   text-decoration: none;
   background-color: #007bff;
@@ -117,29 +179,50 @@ main #Cursos .Curso h3, main #Cursos .Curso p, main #Cursos .Curso img, main #Cu
   margin-bottom: 16px;
 }
 main #Cursos .Curso #Estrellas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 main #Cursos .Curso .Precio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 main #Cursos .Curso .Precio small {
   text-decoration: line-through;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: black;
 }
 footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 footer .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 16px;
 }
 footer .container div a {
@@ -148,6 +231,8 @@ footer .container div a {
 }
 @media (min-width: 768px) {
   footer .container div {
-    flex: 0 0 calc(25% - 16px);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(25% - 16px);
+            flex: 0 0 calc(25% - 16px);
   }
 }/*# sourceMappingURL=styles.css.map */

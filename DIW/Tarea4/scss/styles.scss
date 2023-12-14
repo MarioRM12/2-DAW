@@ -155,7 +155,7 @@ main{
             }
 
             .Boton{
-                @include Boton($color-enlace);
+                @include Boton($color-enlace, $color-blanco);
             }
 
             h3, p, img, div{
