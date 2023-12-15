@@ -1,8 +1,12 @@
-// Imports
+//////////////
+// Imports //
+////////////
 @import "_mixins.scss";
 @import "_variables.scss";
 
-// *
+//////////////
+// General //
+////////////
 *{
 
     margin: 0;
@@ -11,68 +15,101 @@
 
 }
 
-// Body
-
+///////////
+// Body //
+/////////
 body{
+
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
+
 }
 
-// CLASS Container
-
+//////////////////////
+// CLASS Container //
+////////////////////
 .container{
+
     @include desktop{
         max-width: 1200px;
         margin: auto;
     }
+
 }
 
-
-// Header
-
+/////////////
+// Header //
+///////////
 header{
 
-    @include contenedor;
-
-    display: flex;
     position: relative;
-    margin: $margen;
+    display: flex;
+    width: 100%;
 
-    .ContenidoHeader{
+    /////////////
+    // Iconos //
+    ///////////
+    #ContenidoHeader{
+
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
         padding: $margen;
+
     }
 
+    //////////////////////
+    // Menu Despegable //
+    ////////////////////
     #MenuCarrito {
         display: none;
-        width: 35%;
+        width: 30%;
     }
 
-    #MenuCarrito:hover > #carrito{
+    #Carrito:hover > #MenuCarrito{
+
         display: block;
         position: absolute;
         top: 100%;
-    }
+        right: $margen;
+        padding: 0 $margen $margen;
+        background-color: $color-blanco;
 
-    @include desktop{
-        
+        #ContenidoCarrito{
+
+            display: flex;
+
+            div{
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                    margin-bottom: 2px;
+                }
+
+                p{
+                    margin: auto;
+                }
+            }
+        }
+
+        a{
+            @include Boton($color-enlace-hover,$color-blanco);
+        }
     }
 
 }
 
-// Banner
-
+/////////////
+// Banner //
+///////////
 #Banner{
 
-    > *{
-        @include contenedor;
-    }
-
     display: flex;
-    flex-direction: row;
     background-image: url(../img/hero.jpg);
     background-size: cover;
     background-position: center;
@@ -87,20 +124,93 @@ header{
 
     }
 
+    .container{
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: $margen;
+
+    }
+
+    #Buscador{
+
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        input{
+
+            display: flex;
+            flex-grow: 1;
+            padding: calc($margen/2);
+        }
+
+        #IconoBuscar{
+
+            margin-left: calc($margen*-2);
+            height: 70%;
+        
+        }
+    
+        @include tablet{
+            width: 400px;
+        }
+    }
+
+    h1, small{
+        margin: $margen 0;
+    }
+
 }
 
-//Info
-
+///////////
+// Info //
+/////////
 #Info{
 
     display: flex;
-    background-color: linear-gradient(to right, #741d51, #e34d52);
+    background: linear-gradient(to right, #741d51, #e34d52);
 
+    .container{
+    
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
 
+        .iconoInfo{
+
+            margin: $margen;
+            height: 45px;
+
+        }
+
+        .texto{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: $margen;
+            flex-grow: 1;
+
+        }
+
+    }
+
+    @include desktop{
+        .container{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
 
-// Main
-
+///////////
+// Main //
+/////////
 main{
 
     // VALORES DEL MAIN
@@ -121,8 +231,9 @@ main{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: flex-start;
+        justify-content: space-between;
+ 
 
         // VALORES DE CADA CURSO INDIVIDUAL
         .Curso{
@@ -130,7 +241,7 @@ main{
             display: flex;
             flex-direction: column;
             margin: $margen 0;
-            border: gray 0.5px;
+            border: solid lightgrey 1px;
 
             // 1 SOLO ARTICULO PARA DEBAJO DE LAS RESOLUCIONES DE MOVIL
             flex: 1 0 calc(100% - $margen);
@@ -150,16 +261,12 @@ main{
                 flex: 0 0 calc(100%/4 - $margen);
             }
 
-            img{ // Para que se adapte al ancho de la caja padre
-                width: 100%;
-            }
-
             .Boton{
                 @include Boton($color-enlace, $color-blanco);
             }
 
-            h3, p, img, div{
-                margin-bottom: $margen;
+            img{ // Para que se adapte al ancho de la caja padre
+                width: 100%;
             }
 
             #Estrellas{
@@ -167,6 +274,10 @@ main{
                 display: flex;
                 align-self: flex-start
 
+            }
+
+            h3, p, img, div{
+                margin-bottom: $margen;
             }
 
             .Precio{

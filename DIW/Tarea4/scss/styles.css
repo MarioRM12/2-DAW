@@ -5,13 +5,8 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-family: sans-serif;
 }
 
@@ -23,206 +18,202 @@ body {
 }
 
 header {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  margin: 16px;
-}
-header .ContenidoHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
+}
+header #ContenidoHeader {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
   padding: 16px;
 }
 header #MenuCarrito {
   display: none;
-  width: 35%;
+  width: 30%;
 }
-header #MenuCarrito:hover > #carrito {
+header #Carrito:hover > #MenuCarrito {
   display: block;
   position: absolute;
   top: 100%;
+  right: 16px;
+  padding: 0 16px 16px;
+  background-color: white;
 }
-#Banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header #Carrito:hover > #MenuCarrito #ContenidoCarrito {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+header #Carrito:hover > #MenuCarrito #ContenidoCarrito div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #Carrito:hover > #MenuCarrito #ContenidoCarrito div img {
+  width: 100%;
+  margin-bottom: 2px;
+}
+header #Carrito:hover > #MenuCarrito #ContenidoCarrito div p {
+  margin: auto;
+}
+header #Carrito:hover > #MenuCarrito a {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #0056b3;
+  color: white;
+}
+
+#Banner {
+  display: flex;
   background-image: url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
   height: 400px;
   color: white;
 }
-#Banner > * {
-  max-width: 1200px;
-  margin: 0 auto;
+#Banner #Buscador {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+#Banner .container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
 }
 #Banner #Buscador {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
+  align-items: center;
+  width: 100%;
+}
+#Banner #Buscador input {
+  display: flex;
+  flex-grow: 1;
+  padding: 8px;
+}
+#Banner #Buscador #IconoBuscar {
+  margin-left: -32px;
+  height: 70%;
+}
+@media (min-width: 480px) {
+  #Banner #Buscador {
+    width: 400px;
+  }
+}
+#Banner h1, #Banner small {
+  margin: 16px 0;
 }
 
 #Info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background-color: linear-gradient(to right, #741d51, #e34d52);
+  background: linear-gradient(to right, #741d51, #e34d52);
+}
+#Info .container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+#Info .container .iconoInfo {
+  margin: 16px;
+  height: 45px;
+}
+#Info .container .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  #Info .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 16px;
 }
 main h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 main #Cursos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 main #Cursos .Curso {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 16px 0;
-  border: gray 0.5px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(100% - 16px);
-          flex: 1 0 calc(100% - 16px);
+  border: solid lightgrey 1px;
+  flex: 1 0 calc(100% - 16px);
 }
 @media (max-width: 280px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(50% - 16px);
-            flex: 1 0 calc(50% - 16px);
+    flex: 1 0 calc(50% - 16px);
   }
 }
 @media (min-width: 480px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(33.3333333333% - 16px);
-            flex: 0 0 calc(33.3333333333% - 16px);
+    flex: 0 0 calc(33.3333333333% - 16px);
   }
 }
 @media (min-width: 768px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
+    flex: 0 0 calc(25% - 16px);
   }
 }
-main #Cursos .Curso img {
-  width: 100%;
-}
 main #Cursos .Curso .Boton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  justify-content: center;
+  flex-grow: 1;
   padding: 8px 16px;
   text-decoration: none;
   background-color: #007bff;
   color: white;
 }
+main #Cursos .Curso img {
+  width: 100%;
+}
+main #Cursos .Curso #Estrellas {
+  display: flex;
+  align-self: flex-start;
+}
 main #Cursos .Curso h3, main #Cursos .Curso p, main #Cursos .Curso img, main #Cursos .Curso div {
   margin-bottom: 16px;
 }
-main #Cursos .Curso #Estrellas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
 main #Cursos .Curso .Precio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 main #Cursos .Curso .Precio small {
   text-decoration: line-through;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: black;
 }
 footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 footer .container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 16px;
 }
 footer .container div a {
@@ -231,8 +222,6 @@ footer .container div a {
 }
 @media (min-width: 768px) {
   footer .container div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
+    flex: 0 0 calc(25% - 16px);
   }
 }/*# sourceMappingURL=styles.css.map */

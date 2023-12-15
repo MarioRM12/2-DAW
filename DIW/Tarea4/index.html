@@ -9,17 +9,28 @@
 </head>
 <body>
     <header class="container">
-        <div class="ContenidoHeader">
-            <img src="img/logo.jpg" alt="Logo">
-            <img src="img/cart.png" id="Carrito" alt="Carrito">
-            <div id="MenuCarrito">
-                <h4>Imagen</h4>
-                <img src="img/curso1.jpg" alt="">
-                <h4>Nombre</h4>
-                <p>CSS Grid y Flexbox construye + 10 proyectos</p>
-                <h4>Precio</h4>
-                <p>$15</p>
-                <input type="submit" >
+        <div id="ContenidoHeader">
+            <a href="#"><img src="img/logo.jpg" alt=""></a>
+            <div id="Carrito"><img src="img/cart.png" alt="">
+                <section id="MenuCarrito">
+                    <div id="ContenidoCarrito">
+                        <div>
+                            <h3>Imagen</h3>
+                            <img src="img/curso1.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3>Nombre</h3>
+                            <p>CSS Grid y Flexbox Construye + 10 Proyectos</p>
+                        </div>
+                        <div>
+                            <h3>Precio</h3>
+                            <p>$15</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="Boton">Vaciar Carrito</a>
+                    </div>
+                </section>
             </div>
         </div>
     </header>
@@ -29,8 +40,8 @@
             <h1>Aprende algo nuevo</h1>
             <small>todos los cursos a $15</small>
             <div id="Buscador">
-                <p>¿Que te gustaría Aprender?</p>
-                <img src="img/lupa.png" alt="Boton Buscar">
+                <input type="search" placeholder="¿Que te gustaría aprender?">
+                <img id="IconoBuscar" src="img/lupa.png" alt="Boton Buscar">
             </div>
         </div>
     </div>
@@ -38,19 +49,19 @@
     <div id="Info">
         <div class="container">
 
-            <img class="icono_portada" src="img/icono1.png" alt="bombilla">
+            <img class="iconoInfo" src="img/icono1.png" alt="bombilla">
             <div class="texto">
                 <p>200.000 cursos en línea</p>
                 <p>Explora los temas más recientes</p>
             </div>
 
-            <img class="icono_portada" src="img/icono2.png" alt="bombilla">
+            <img class="iconoInfo" src="img/icono2.png" alt="bombilla">
             <div class="texto">
                 <p>Instructores Expertos</p>
                 <p>Aprende con distintos estilos</p>
             </div>
 
-            <img class="icono_portada" src="img/icono3.png" alt="bombilla">
+            <img class="iconoInfo" src="img/icono3.png" alt="bombilla">
             <div class="texto">
                 <p>Acceso de por vida</p>
                 <p>Aprende a tu ritmo</p>
