@@ -14,7 +14,7 @@ const siguiente = document.getElementById("siguiente");
 
 let ordenValores = ['A','2','3','4','5','6','7','8','9','J','Q','K'];
 //Generar cartas
-let intentos = 1;
+let intentos = 0;
 let acertadas = 0;
 let cartas = [];
 cartas = baraja();

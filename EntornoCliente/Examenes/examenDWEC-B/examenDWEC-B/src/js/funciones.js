@@ -31,6 +31,9 @@ function destapar(index) {
         else
         {
             mensaje.innerText = "Te has equivocado";
+            setTimeout(()=>{tapar(index)},1000);
+            intentos++;
+            intentosHTML.innerText = intentos;
         }
     }
 }
