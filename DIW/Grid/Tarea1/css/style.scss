@@ -1,0 +1,61 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+*{
+
+    margin: 0;
+
+}
+
+#contenedor{
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15% 35% 35% 15%;
+    min-height: 100vh;
+
+    header{
+
+        display: grid;
+        background-color: rgb(219, 138, 17);
+        grid-column-start: 1;
+        grid-column-end: 5;        
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    main{
+
+        display: grid;
+        background-color: rgb(255, 50, 50);
+        grid-column-start: 1;
+        grid-column-end: 4;        
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+    }
+
+    aside{
+
+        display: grid;
+        background-color: rgb(21, 137, 141);
+        grid-column-start: 4;
+        grid-column-end: 5;        
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+    }
+
+    footer{
+
+        display: grid;
+        background-color: rgb(4, 28, 187);
+        grid-column-start: 1;
+        grid-column-end: 5;        
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+    }
+
+}

@@ -1,0 +1,18 @@
+#contenedor {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 35% 15%;
+}
+#contenedor header {
+  display: grid;
+  background-color: rgb(219, 138, 17);
+}
+#contenedor main {
+  background-color: rgb(255, 50, 50);
+}
+#contenedor aside {
+  background-color: rgb(21, 137, 141);
+}
+#contenedor footer {
+  background-color: rgb(4, 28, 187);
+}/*# sourceMappingURL=style2.css.map */
