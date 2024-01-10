@@ -1,36 +1,70 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
 #contenedor{
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 auto;
+
+    
+    grid-template-columns: calc(25% - 30px/4)calc(25% - 30px/4)calc(25% - 30px/4)calc(25% - 30px/4);
     grid-template-rows: 15% 35% 35% 15%;
+
+    gap: 10px;
+    
+    max-width: 1200px;
+    height: calc(100vh - 30px);
 
     header{
 
-        display: grid;
         background-color: rgb(219, 138, 17);
-        
-        
-        
+
+        grid-column: 1/5;
+        grid-row: 1/2;
+
     }
 
     main{
 
         background-color: rgb(255, 50, 50);
 
-    }
+        grid-column: 1/5;
+        grid-row: 2/3;
+
+        @include desktop{
+            grid-column: 1/4;
+            grid-row: 2/4;
+        }
+
+    }   
 
     aside{
 
-        background-color: rgb(21, 137, 141);
+        background-color: rgb(100, 143, 51);
+
+        grid-column: 1/5;
+        grid-row: 3/4;
+
+        @include desktop{
+            grid-column: 4/5;
+            grid-row: 2/4;
+        }
 
     }
 
     footer{
 
         background-color: rgb(4, 28, 187);
+        grid-column: 1/5;        
+        grid-row: 4/5;
 
     }
 

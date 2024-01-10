@@ -4,20 +4,29 @@
 *{
 
     margin: 0;
+    padding: 0;
+    border: 0;
 
 }
 
 #contenedor{
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 auto;
+
+    
+    grid-template-columns: calc(25% - 30px/4)calc(25% - 30px/4)calc(25% - 30px/4)calc(25% - 30px/4);
     grid-template-rows: 15% 35% 35% 15%;
-    min-height: 100vh;
+
+    gap: 10px;
+    
+    max-width: 1200px;
+    height: calc(100vh - 30px);
 
     header{
 
-        display: grid;
         background-color: rgb(219, 138, 17);
+
         grid-column-start: 1;
         grid-column-end: 5;        
         grid-row-start: 1;
@@ -27,29 +36,38 @@
 
     main{
 
-        display: grid;
         background-color: rgb(255, 50, 50);
-        grid-column-start: 1;
-        grid-column-end: 4;        
-        grid-row-start: 2;
-        grid-row-end: 4;
 
-    }
+        grid-column-start: 1;
+        grid-column-end: 5;        
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        @include desktop{
+            grid-column-end: 4;        
+            grid-row-end: 4;
+        }
+
+    }   
 
     aside{
 
-        display: grid;
-        background-color: rgb(21, 137, 141);
-        grid-column-start: 4;
+        background-color: rgb(100, 143, 51);
+
+        grid-column-start: 1;
         grid-column-end: 5;        
-        grid-row-start: 2;
+        grid-row-start: 3;
         grid-row-end: 4;
+
+        @include desktop{
+            grid-column-start: 4;        
+            grid-row-start: 2;
+        }
 
     }
 
     footer{
 
-        display: grid;
         background-color: rgb(4, 28, 187);
         grid-column-start: 1;
         grid-column-end: 5;        

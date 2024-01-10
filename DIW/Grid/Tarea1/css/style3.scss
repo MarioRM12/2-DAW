@@ -1,36 +1,59 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
 #contenedor{
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 15% 35% 35% 15%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "header header header header"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+
+    gap: 10px;
+    
+    max-width: 1200px;
+    height: 100vh;
 
     header{
 
-        display: grid;
         background-color: rgb(219, 138, 17);
-        
-        
-        
+
+        grid-area: header;
+
     }
 
     main{
 
         background-color: rgb(255, 50, 50);
 
-    }
+        grid-area: main;
+
+    }   
 
     aside{
 
-        background-color: rgb(21, 137, 141);
+        background-color: rgb(100, 143, 51);
+
+        grid-area: aside;
 
     }
 
     footer{
 
         background-color: rgb(4, 28, 187);
+
+        grid-area: footer;
 
     }
 
