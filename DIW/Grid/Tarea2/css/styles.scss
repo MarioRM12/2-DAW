@@ -1,0 +1,28 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+.contenedor{
+    @include contenedor;
+}
+
+header{
+
+
+}
+
+body{
+
+
+}
+
+footer{
+
+
+}
