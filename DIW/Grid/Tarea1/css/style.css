@@ -14,14 +14,14 @@
   height: calc(100vh - 30px);
 }
 #contenedor header {
-  background-color: rgb(219, 138, 17);
+  background-color: #ff8357;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 #contenedor main {
-  background-color: rgb(255, 50, 50);
+  background-color: #8d0909;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -34,7 +34,7 @@
   }
 }
 #contenedor aside {
-  background-color: rgb(100, 143, 51);
+  background-color: #7e831a;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 3;
@@ -47,7 +47,7 @@
   }
 }
 #contenedor footer {
-  background-color: rgb(4, 28, 187);
+  background-color: #13007d;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 4;

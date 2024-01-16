@@ -25,7 +25,7 @@
 
     header{
 
-        background-color: rgb(219, 138, 17);
+        background-color: $colorHeader;
 
         grid-column-start: 1;
         grid-column-end: 5;        
@@ -36,7 +36,7 @@
 
     main{
 
-        background-color: rgb(255, 50, 50);
+        background-color: $colorMain;
 
         grid-column-start: 1;
         grid-column-end: 5;        
@@ -52,7 +52,7 @@
 
     aside{
 
-        background-color: rgb(100, 143, 51);
+        background-color: $colorAside;
 
         grid-column-start: 1;
         grid-column-end: 5;        
@@ -68,7 +68,7 @@
 
     footer{
 
-        background-color: rgb(4, 28, 187);
+        background-color: $colorFooter;
         grid-column-start: 1;
         grid-column-end: 5;        
         grid-row-start: 4;

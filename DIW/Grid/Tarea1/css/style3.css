@@ -19,13 +19,13 @@
   }
 }
 #contenedor header {
-  background-color: rgb(219, 138, 17);
+  background-color: #ff8357;
   grid-area: header;
 }
 #contenedor main {
   display: grid;
   grid-area: main;
-  background-color: rgb(255, 50, 50);
+  background-color: #8d0909;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -33,16 +33,16 @@
   gap: 15px;
 }
 #contenedor main article {
-  background-color: rgb(162, 0, 255);
+  background-color: #e09cdb;
 }
 #contenedor main article img {
   max-width: 100%;
 }
 #contenedor aside {
-  background-color: rgb(100, 143, 51);
+  background-color: #7e831a;
   grid-area: aside;
 }
 #contenedor footer {
-  background-color: rgb(4, 28, 187);
+  background-color: #13007d;
   grid-area: footer;
 }/*# sourceMappingURL=style3.css.map */
