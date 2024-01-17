@@ -8,6 +8,10 @@
 
 }
 
+body{
+
+}
+
 .contenedor{
     @include contenedor;
 }
@@ -15,14 +19,69 @@
 header{
 
 
+    nav{
+
+        background-color: $colorNegro;
+        color: $colorBlanco;
+        margin-top: 25px;
+        margin-bottom: 35px;
+
+        ul{
+
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+
+            li{
+                padding: 10px 30px;
+                list-style: none;
+                text-align: center;
+            }
+
+            li:hover{
+                background-color: $colorVerde;
+                color: $colorNegro;
+            }
+            
+        }
+
+    }
+
 }
 
-body{
+main{
+
+    // display: ;
+    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+
+    #imagenPrincipal{
+        max-width: 100%;
+    }
 
 
 }
 
 footer{
+
+    #menuFooter{
+
+        section{
+
+        }
+
+    }
+
+    #copy{
+
+        background-color: $colorFooter;
+
+        p{
+            
+        }
+        // text-align: center;
+
+
+    }
 
 
 }

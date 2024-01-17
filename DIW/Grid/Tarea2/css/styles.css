@@ -7,4 +7,36 @@
 .contenedor {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+header nav {
+  background-color: #000000;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+header nav ul {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+header nav ul li {
+  padding: 10px 30px;
+  list-style: none;
+  text-align: center;
+}
+header nav ul li:hover {
+  background-color: #c9c84a;
+  color: #000000;
+}
+
+main {
+  grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+  grid-template-rows: repeat(4, auto);
+}
+main #imagenPrincipal {
+  max-width: 100%;
+}
+
+footer #copy {
+  background-color: #282828;
 }/*# sourceMappingURL=styles.css.map */
