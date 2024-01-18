@@ -29,7 +29,7 @@ header{
         ul{
 
             display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
 
             li{
                 padding: 10px 30px;
@@ -46,16 +46,22 @@ header{
 
     }
 
+    #imagenPrincipal{
+        max-width: 100%;
+    }
+
 }
 
 main{
+    
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
 
-    // display: ;
-    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
-    grid-template-rows: repeat(4, auto);
-
-    #imagenPrincipal{
-        max-width: 100%;
+    @include desktop{
+     
+        grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+        grid-template-rows: repeat(4, auto);
+        
     }
 
 
@@ -63,9 +69,22 @@ main{
 
 footer{
 
+    background-color: $colorVerde;    
+
     #menuFooter{
 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
         section{
+
+            margin: 15px;
+            text-align: center;
+            
+            p{
+                color: $colorTextoGrisFooter;
+            }
 
         }
 
@@ -74,12 +93,9 @@ footer{
     #copy{
 
         background-color: $colorFooter;
-
-        p{
-            
-        }
-        // text-align: center;
-
+        text-align: center;
+        color: $colorBlanco;
+        padding: 15px;
 
     }
 

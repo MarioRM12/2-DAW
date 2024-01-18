@@ -17,7 +17,7 @@ header nav {
 }
 header nav ul {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 header nav ul li {
   padding: 10px 30px;
@@ -28,15 +28,39 @@ header nav ul li:hover {
   background-color: #c9c84a;
   color: #000000;
 }
-
-main {
-  grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
-  grid-template-rows: repeat(4, auto);
-}
-main #imagenPrincipal {
+header #imagenPrincipal {
   max-width: 100%;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+footer {
+  background-color: #c9c84a;
+}
+footer #menuFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer #menuFooter section {
+  margin: 15px;
+  text-align: center;
+}
+footer #menuFooter section p {
+  color: #525252;
+}
 footer #copy {
   background-color: #282828;
+  text-align: center;
+  color: white;
+  padding: 15px;
 }/*# sourceMappingURL=styles.css.map */
