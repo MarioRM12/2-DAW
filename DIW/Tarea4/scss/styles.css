@@ -5,13 +5,8 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-family: sans-serif;
 }
 
@@ -24,21 +19,13 @@ body {
 
 header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 header #ContenidoHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-grow: 1;
+  justify-content: space-between;
   padding: 16px;
 }
 header #MenuCarrito {
@@ -54,21 +41,12 @@ header #Carrito:hover > #MenuCarrito {
   background-color: white;
 }
 header #Carrito:hover > #MenuCarrito #ContenidoCarrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 header #Carrito:hover > #MenuCarrito #ContenidoCarrito div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 header #Carrito:hover > #MenuCarrito #ContenidoCarrito div img {
   width: 100%;
@@ -78,15 +56,9 @@ header #Carrito:hover > #MenuCarrito #ContenidoCarrito div p {
   margin: auto;
 }
 header #Carrito:hover > #MenuCarrito a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  justify-content: center;
+  flex-grow: 1;
   padding: 8px 16px;
   text-decoration: none;
   background-color: #0056b3;
@@ -94,8 +66,6 @@ header #Carrito:hover > #MenuCarrito a {
 }
 
 #Banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-image: url(../img/hero.jpg);
   background-size: cover;
@@ -104,50 +74,26 @@ header #Carrito:hover > #MenuCarrito a {
   color: white;
 }
 #Banner #Buscador {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   background-color: white;
 }
 #Banner .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 16px;
 }
 #Banner #Buscador {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
 }
 #Banner #Buscador input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   padding: 8px;
 }
 #Banner #Buscador #IconoBuscar {
@@ -164,138 +110,75 @@ header #Carrito:hover > #MenuCarrito a {
 }
 
 #Info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left top, right top, from(#741d51), to(#e34d52));
   background: linear-gradient(to right, #741d51, #e34d52);
 }
 #Info .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: row;
+  flex-grow: 1;
 }
 #Info .container .iconoInfo {
   margin: 16px;
   height: 45px;
 }
 #Info .container .texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 16px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 @media (min-width: 768px) {
   #Info .container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 16px;
 }
 main h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 main #Cursos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 main #Cursos .Curso {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 16px 0;
   border: solid lightgrey 1px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(100% - 16px);
-          flex: 1 0 calc(100% - 16px);
+  flex: 1 0 calc(100% - 16px);
 }
 @media (max-width: 280px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(50% - 16px);
-            flex: 1 0 calc(50% - 16px);
+    flex: 1 0 calc(50% - 16px);
   }
 }
 @media (min-width: 480px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(33.3333333333% - 16px);
-            flex: 0 0 calc(33.3333333333% - 16px);
+    flex: 0 0 calc(33.3333333333% - 16px);
   }
 }
 @media (min-width: 768px) {
   main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
+    flex: 0 0 calc(25% - 16px);
   }
 }
 main #Cursos .Curso .Boton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  justify-content: center;
+  flex-grow: 1;
   padding: 8px 16px;
   text-decoration: none;
   background-color: #007bff;
@@ -305,53 +188,32 @@ main #Cursos .Curso img {
   width: 100%;
 }
 main #Cursos .Curso #Estrellas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 main #Cursos .Curso h3, main #Cursos .Curso p, main #Cursos .Curso img, main #Cursos .Curso div {
   margin-bottom: 16px;
 }
 main #Cursos .Curso .Precio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 main #Cursos .Curso .Precio small {
   text-decoration: line-through;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: black;
 }
 footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 footer .container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 16px;
 }
 footer .container div a {
@@ -360,8 +222,6 @@ footer .container div a {
 }
 @media (min-width: 768px) {
   footer .container div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
+    flex: 0 0 calc(25% - 16px);
   }
 }/*# sourceMappingURL=styles.css.map */
