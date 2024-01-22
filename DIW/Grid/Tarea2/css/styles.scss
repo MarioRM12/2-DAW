@@ -8,10 +8,6 @@
 
 }
 
-body{
-
-}
-
 .contenedor{
     @include contenedor;
 }
@@ -29,7 +25,7 @@ header{
         ul{
 
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax($anchoMinimo, 1fr));
 
             li{
                 padding: 10px 30px;
@@ -53,29 +49,123 @@ header{
 }
 
 main{
-    
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
 
-    @include desktop{
-     
-        grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
-        grid-template-rows: repeat(4, auto);
+    h1{
+        text-align: center;
+    }
+
+    #MenuIzq{
+
+        display: grid;
+        text-align: center;
+        align-items: center;
+        background-color: $colorVerde;
+        color: $colorTextoGrisFooter;
+
+        p{
+            color: $colorBlanco;
+        }
+    }
+
+    #Texto{
+
+        p{
+            padding: 10px;
+        }
+
         
+        #textoEspecial{
+
+            text-align: center;
+            margin: 0px 15px;
+            font-style: italic;
+            font-size: large;
+
+        }
+
+    }
+
+    #ImgDer{
+
+        display: grid;
+        grid-row: 4 / 5;
+        margin: auto;
+
+    }
+
+    #ImgIzq{
+
+        display: grid;
+        grid-row: 5 / 6;
+        margin: auto;
+
     }
 
 
+
+    @include desktop{
+     
+        #contenidoCentral{
+
+            display: grid;
+            grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+            grid-template-rows: repeat(4, auto);
+            gap: 10px;
+
+        }
+
+        h1{
+
+            display: grid;
+            grid-column: 1 / 5;
+            grid-row: 1 / 2;
+
+        }
+
+        #MenuIzq{
+
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+        }
+     
+        #ImgDer{
+
+            display: grid;
+            max-width: 100%;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+
+        }
+
+        #ImgIzq{
+
+            display: grid;
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            max-width: 100%;
+
+        }
+
+        #Texto{
+
+            display: grid;
+            grid-column: 2 / 3;
+            grid-row: 2 / 5; 
+
+        }
+    }
 }
 
 footer{
 
+    margin-top: 15px;
     background-color: $colorVerde;    
 
     #menuFooter{
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-
+        grid-template-columns: repeat(auto-fit, minmax($anchoMinimo, 1fr));
 
         section{
 
