@@ -8,6 +8,10 @@
 
 }
 
+img{
+    max-width: 100%;
+}
+
 .contenedor{
     @include contenedor;
 }
@@ -41,11 +45,6 @@ header{
         }
 
     }
-
-    #imagenPrincipal{
-        max-width: 100%;
-    }
-
 }
 
 main{

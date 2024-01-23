@@ -4,6 +4,10 @@
   border: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .contenedor {
   max-width: 1100px;
   margin: 0 auto;
@@ -28,9 +32,6 @@ header nav ul li:hover {
   background-color: #c9c84a;
   color: #000000;
 }
-header #imagenPrincipal {
-  max-width: 100%;
-}
 
 main h1 {
   text-align: center;
@@ -38,7 +39,9 @@ main h1 {
 main #MenuIzq {
   display: grid;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #c9c84a;
   color: #525252;
 }
@@ -67,6 +70,7 @@ main #ImgIzq {
 @media (min-width: 768px) {
   main #contenidoCentral {
     display: grid;
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
     grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
     grid-template-rows: repeat(4, auto);
     gap: 10px;
