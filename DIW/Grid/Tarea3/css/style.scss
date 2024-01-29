@@ -1,3 +1,4 @@
+@import '_mixins.scss';
 :root {
     --primario:#7abe47;
     --secundario:#ffc845;
@@ -13,6 +14,23 @@
     margin: 0;
     padding: 0;
     border: 0;
+
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+img{
+
+    max-width: 100%;
+
+}
+
+body{
+
+    background-color: var(--gris);
+
 }
 
 .contenedor{
@@ -22,15 +40,117 @@
 header{
 
     background-color: var(--primario);
+    padding: var(--padding);
 
+    div{
+
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+        img{
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+        nav{
+
+            grid-column-start: 3;
+
+            ul{
+    
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
+                li{
+                    text-align: center;
+                }
+            }
+        }
+    
+        a{
+            color: var(--claro);
+        }
+    }
+}
+
+
+#SobreNosotros{
+
+    display: grid;
+    padding: var(--padding);
+    gap: var(--padding);
+
+    img{
+        margin: 0 auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    @include desktop{
+
+        grid-template-columns: calc(50% - var(--padding)/2) calc(50% - var(--padding)/2);
+
+        div{
+
+            h1{
+                text-align: start;
+                padding-top:  var(--paddingt);
+                padding-bottom:  var(--paddingt);
+            }
+
+            p{
+                line-height: 25px;
+            }
+        }
+    }
 }
 
 main{
 
+    h2{
+
+        padding: var(--padding);
     
+    }
+
+    #Articulos{
+
+        display: grid;
+        grid-template-columns: "destacado destacado articulo"
+        "articulo articulo articulo";
+
+        .destacado{
+
+            display: grid;
+            grid-area: destacado;
+
+        }
+
+        article{
+
+            grid-area: articulo;
+
+        }
+
+    }
+
 
 }
 
 footer{
+
+    background-color: var(--primario);
+
+    section{}
+
+    #copyright{
+
+        background-color: var(--oscuro);
+
+    }
 
 }
