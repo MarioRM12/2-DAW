@@ -41,11 +41,9 @@ header{
 
     background-color: var(--primario);
     padding: var(--padding);
+    
 
     div{
-
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
 
         img{
 
@@ -56,12 +54,12 @@ header{
 
         nav{
 
+            display: grid;
             grid-column-start: 3;
 
             ul{
     
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     
                 li{
                     text-align: center;
@@ -71,6 +69,23 @@ header{
     
         a{
             color: var(--claro);
+        }
+    }
+
+    @include desktop{
+
+
+        div{
+
+            display: grid;
+            grid-template-columns: 30% auto 30%;
+            align-items: center;
+
+            nav{
+                ul{
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                }
+            }
         }
     }
 }
@@ -83,7 +98,8 @@ header{
     gap: var(--padding);
 
     img{
-        margin: 0 auto;
+        // margin: 0 auto;
+        width: 100%;
     }
 
     h1{
@@ -103,7 +119,7 @@ header{
             }
 
             p{
-                line-height: 25px;
+                line-height: var(--padding);
             }
         }
     }
@@ -113,31 +129,57 @@ main{
 
     h2{
 
-        padding: var(--padding);
-    
+        padding:var(--padding);
+
     }
 
     #Articulos{
 
         display: grid;
-        grid-template-columns: "destacado destacado articulo"
-        "articulo articulo articulo";
+        grid-template-columns: 50% 50%;
+        gap: var(--padding);
 
-        .destacado{
+        #destacado{
 
-            display: grid;
-            grid-area: destacado;
+            grid-column: 1/3;
+
+            img{
+                grid-column: 1/3;
+            }
 
         }
 
         article{
 
-            grid-area: articulo;
+            background-color: var(--claro);
+            border: 1px solid var(--negro);
+
+            div{
+
+                display: grid;
+                padding: var(--padding);
+                gap: var(--padding);
+
+                a{
+                    text-align: center;
+                    color: var(--claro);
+                    background-color: var(--primario);
+                    padding: 10px 25px;
+                }
+
+                span{
+
+                    color: var(--primario);
+
+                }
+
+            }
 
         }
+        
+
 
     }
-
 
 }
 
