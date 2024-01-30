@@ -22,15 +22,11 @@
 }
 
 img{
-
     max-width: 100%;
-
 }
 
 body{
-
     background-color: var(--gris);
-
 }
 
 .contenedor{
@@ -98,7 +94,6 @@ header{
     gap: var(--padding);
 
     img{
-        // margin: 0 auto;
         width: 100%;
     }
 
@@ -119,7 +114,7 @@ header{
             }
 
             p{
-                line-height: var(--padding);
+                line-height: 20px;
             }
         }
     }
@@ -128,9 +123,7 @@ header{
 main{
 
     h2{
-
         padding:var(--padding);
-
     }
 
     #Articulos{
@@ -143,22 +136,30 @@ main{
 
             grid-column: 1/3;
 
-            img{
-                grid-column: 1/3;
-            }
+            @include tablet{
 
+                display: grid;
+                grid-template-columns: calc(50% - var(--padding)/2) calc(50% - var(--padding)/2);
+
+                img{
+                    grid-column: 1/2;
+                }
+            }
         }
 
         article{
 
             background-color: var(--claro);
             border: 1px solid var(--negro);
+            margin: auto;
 
             div{
 
                 display: grid;
                 padding: var(--padding);
                 gap: var(--padding);
+                margin: auto;
+                
 
                 a{
                     text-align: center;
@@ -166,33 +167,83 @@ main{
                     background-color: var(--primario);
                     padding: 10px 25px;
                 }
-
-                span{
-
+                
+                a:hover{
+                    background-color: var(--claro);
                     color: var(--primario);
-
                 }
 
+                span{
+                    color: var(--primario);
+                }
             }
-
         }
-        
 
-
+        @include desktop{
+            grid-template-columns: 33% 33% 33%;
+        }
     }
-
 }
 
 footer{
 
     background-color: var(--primario);
+    color: var(--claro);
+    margin-top: var(--padding);
 
-    section{}
+    #seciones{
 
-    #copyright{
+        display: grid;
 
-        background-color: var(--oscuro);
+        h2{
+            padding-top: var(--padding);
+        }
 
+        section{
+
+        }
+
+        #nosotros{
+
+        }
+
+        #Navegación{
+            ul{
+                li{
+                    a{
+                        color: var(--claro);
+                    }
+                }
+            }
+        }
+
+        #Casas{
+            article{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                div{
+                    padding: var(--padding);
+                }
+            }
+        }
+
+        @include desktop{
+
+            grid-template-columns: 30% 20% 2fr;
+
+            #Casas{
+                div{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+        }
     }
 
+    #copyright{
+        line-height: 50px;
+        background-color: var(--oscuro);
+        text-align: center;
+        margin-top: var(--padding);
+    }
 }

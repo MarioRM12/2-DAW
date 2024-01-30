@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --primario:#7abe47;
   --secundario:#ffc845;
@@ -53,13 +54,11 @@ header div nav ul li {
 header div a {
   color: var(--claro);
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header div {
     display: grid;
     grid-template-columns: 30% auto 30%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   header div nav ul {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -77,7 +76,7 @@ header div a {
 #SobreNosotros h1 {
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   #SobreNosotros {
     grid-template-columns: calc(50% - var(--padding) / 2) calc(50% - var(--padding) / 2);
   }
@@ -87,7 +86,7 @@ header div a {
     padding-bottom: var(--paddingt);
   }
   #SobreNosotros div p {
-    line-height: var(--padding);
+    line-height: 20px;
   }
 }
 
@@ -102,17 +101,25 @@ main #Articulos {
 main #Articulos #destacado {
   grid-column: 1/3;
 }
-main #Articulos #destacado img {
-  grid-column: 1/3;
+@media (min-width: 480px) {
+  main #Articulos #destacado {
+    display: grid;
+    grid-template-columns: calc(50% - var(--padding) / 2) calc(50% - var(--padding) / 2);
+  }
+  main #Articulos #destacado img {
+    grid-column: 1/2;
+  }
 }
 main #Articulos article {
   background-color: var(--claro);
   border: 1px solid var(--negro);
+  margin: auto;
 }
 main #Articulos article div {
   display: grid;
   padding: var(--padding);
   gap: var(--padding);
+  margin: auto;
 }
 main #Articulos article div a {
   text-align: center;
@@ -120,13 +127,52 @@ main #Articulos article div a {
   background-color: var(--primario);
   padding: 10px 25px;
 }
+main #Articulos article div a:hover {
+  background-color: var(--claro);
+  color: var(--primario);
+}
 main #Articulos article div span {
   color: var(--primario);
+}
+@media (min-width: 700px) {
+  main #Articulos {
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 
 footer {
   background-color: var(--primario);
+  color: var(--claro);
+  margin-top: var(--padding);
+}
+footer #seciones {
+  display: grid;
+}
+footer #seciones h2 {
+  padding-top: var(--padding);
+}
+footer #seciones #Navegación ul li a {
+  color: var(--claro);
+}
+footer #seciones #Casas article {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer #seciones #Casas article div {
+  padding: var(--padding);
+}
+@media (min-width: 700px) {
+  footer #seciones {
+    grid-template-columns: 30% 20% 2fr;
+  }
+  footer #seciones #Casas div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 footer #copyright {
+  line-height: 50px;
   background-color: var(--oscuro);
+  text-align: center;
+  margin-top: var(--padding);
 }/*# sourceMappingURL=style.css.map */
