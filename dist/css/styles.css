@@ -4,102 +4,126 @@
   border: 0;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: sans-serif;
+img {
+  max-width: 100%;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
+header nav {
+  background-color: #000000;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
-header #ContenidoHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 16px;
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-header #MenuCarrito {
-  display: none;
-  width: 30%;
+header nav ul li {
+  padding: 10px 30px;
+  list-style: none;
+  text-align: center;
 }
-header #Carrito:hover > #MenuCarrito {
-  display: block;
-  position: absolute;
-  top: 100%;
-  right: 16px;
-  padding: 0 16px 16px;
-  background-color: white;
+header nav ul li:hover {
+  background-color: #c9c84a;
+  color: #000000;
 }
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+main h1 {
+  text-align: center;
 }
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+main #MenuIzq {
+  display: grid;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #c9c84a;
+  color: #525252;
 }
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div img {
-  width: 100%;
-  margin-bottom: 2px;
-}
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div p {
-  margin: auto;
-}
-header #Carrito:hover > #MenuCarrito a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color: #0056b3;
+main #MenuIzq p {
   color: white;
 }
+main #Texto p {
+  padding: 10px;
+}
+main #Texto #textoEspecial {
+  text-align: center;
+  margin: 0px 15px;
+  font-style: italic;
+  font-size: large;
+}
+main #ImgDer {
+  display: grid;
+  grid-row: 4/5;
+  margin: auto;
+}
+main #ImgIzq {
+  display: grid;
+  grid-row: 5/6;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  main #contenidoCentral {
+    display: grid;
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+  }
+  main h1 {
+    display: grid;
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  main #MenuIzq {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main #ImgDer {
+    display: grid;
+    max-width: 100%;
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  main #ImgIzq {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    max-width: 100%;
+  }
+  main #Texto {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+}
 
-#Banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-image: url(../img/hero.jpg);
-  background-size: cover;
-  background-position: center;
+footer {
+  margin-top: 15px;
+  background-color: #c9c84a;
+}
+footer #menuFooter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+footer #menuFooter section {
+  margin: 15px;
+  text-align: center;
+}
+footer #menuFooter section p {
+  color: #525252;
+}
+footer #copy {
+  background-color: #282828;
+  text-align: center;
+  color: white;
+  padding: 15px;
+}osition: center;
   height: 400px;
   color: white;
 }
@@ -364,4 +388,4 @@ footer .container div a {
         -ms-flex: 0 0 calc(25% - 16px);
             flex: 0 0 calc(25% - 16px);
   }
-}/*# sourceMappingURL=styles.css.map */
+}
