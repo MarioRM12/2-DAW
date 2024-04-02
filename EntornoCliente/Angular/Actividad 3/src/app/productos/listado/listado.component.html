@@ -1,0 +1,22 @@
+<div class="row" *ngIf="productos.length == 0">
+    <div class="col-12 bg-danger">
+        No hay productos
+    </div>
+</div>
+<div class="row" *ngFor="let item of productos">
+    <div class="col-2">
+        {{ item.nombre }}
+    </div>
+    <div class="col-1">
+        {{ item.precio }}
+    </div>
+    <div class="col-2">
+        {{ item.categoria }}
+    </div>
+    <div class="col-2">
+        <button (click)="eliminar(item.nombre)" type="button" name="eliminar[]" id="eliminar[]" class="btn btn-primary" btn-lg btn-block>Eliminar</button>
+    </div>
+</div>
+<div class="warning bg-warning" *ngIf="eliminado!=null">
+        Elemento eliminado: {{eliminado.nombre}}, {{eliminado.precio}}, {{eliminado.categoria}}
+</div>
