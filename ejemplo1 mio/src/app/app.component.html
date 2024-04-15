@@ -1,0 +1,24 @@
+
+<app-header></app-header>
+<body>
+  Contenido
+</body>
+<footer>
+  Pie de pagina
+</footer>
+
+
+
+
+
+
+
+
+<h1 *ngIf="mostrar" >Hello, {{ title }}</h1>
+
+<button (click)="cambiar()"> Ver / Ocultar</button>
+
+<h1>Lista de numeros</h1>
+<ul *ngFor="let n of lista; let i = index">
+<li>{{ i + 1 }} - {{ n }}</li>
+</ul>

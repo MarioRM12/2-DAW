@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1 *ngIf="mostrar">NgIf</h1>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p *ngIf="mostrar" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a (click)="mostrarOcultar()" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-6">
+            <h1>NgFor</h1>
+
+            <ul class="list-group">
+                <li *ngFor="let item of milista; let i=index" 
+                    class="list-group-item">
+                    {{ i + 1 }}. {{ item }}
+                </li>
+            </ul>
+
+
+
+        </div>
+        
+    </div>
+</div>

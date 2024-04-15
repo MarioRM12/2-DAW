@@ -1,0 +1,23 @@
+<h1>Listado Productos</h1>
+<ul class="list-group">
+    <li class="d-inline-flex" *ngFor="let item of productos; let i = index">
+        <div class="col-1 my-3"> {{ item.nombre }} </div>
+        <div class="col-1 my-3"> {{ item.precio }} </div>
+        <div class="col-1 my-3"> {{ item.categoria }} </div>
+        <div class="col-1 my-3">
+            <button class="btn btn-danger" (click)="Eliminar(i)">Eliminar</button>
+        </div>
+    </li>
+</ul>
+<hr>
+<h1>Productos Desechados</h1>
+<ul class="list-group">
+    <li class="d-inline-flex" *ngFor="let item of Desechados; let i = index">
+        <div class="col-1 my-3"> {{ item.nombre }} </div>
+        <div class="col-1 my-3"> {{ item.precio }} </div>
+        <div class="col-1 my-3"> {{ item.categoria }} </div>
+        <div class="col-1 my-3">
+            <button class="btn btn-danger" (click)="Eliminar(i)">Eliminar</button>
+        </div>
+    </li>
+</ul>
