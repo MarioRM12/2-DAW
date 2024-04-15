@@ -1,0 +1,6 @@
+* gestión de turno
+- cambiar imagen en cada estado.
+- posibilidad de cancelar turno mientras se espera.
+- crear conversación, enviando un texto cuando se tiene el turno mediante
+  un botón.
+- incluir barra de scroll en la zona de chat.

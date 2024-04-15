@@ -1,0 +1,6 @@
+1. Crear componentes.
+2. Establecer relaciones mediante etiquetas HTML app-
+3. Crear archivo de servicio con los datos y métodos.
+4. Implementar diseño de los componentes.
+5. Crear emisores de eventos en el archivo de servicio.
+6. Suscribir los componentes a los eventos del servicio.

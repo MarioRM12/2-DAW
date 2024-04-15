@@ -1,0 +1,10 @@
+<div class="card">
+    <img src="./assets/images/joven3a.png" class="card-img-top" [alt]="persona.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{persona.nombre}}</h5>
+      
+      <button *ngIf="estadoInactivo()" (click)="cambiarEstado()" class="btn btn-primary">Pedir turno</button>
+      <button *ngIf="estadoEsperando()" (click)="cambiarEstado()" class="btn btn-primary">Esperando...</button>
+      <button *ngIf="estadoHablando()" (click)="cambiarEstado()" class="btn btn-primary">Acabar</button>
+    </div>
+  </div>

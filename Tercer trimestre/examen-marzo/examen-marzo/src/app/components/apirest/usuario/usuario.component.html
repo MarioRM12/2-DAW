@@ -1,0 +1,42 @@
+<form class="row g-3 needs-validation" novalidate>
+
+    <div class="col-md-4">
+        <label for="Id" class="form-label">Id</label>
+        <div class="input-group">
+          <input 
+                type="text" class="form-control" id="Id" >
+          <div>
+            El número de identificación es obligatorio.
+          </div>
+        </div>
+    </div>
+  <div class="col-md-4">
+    <label for="Nombre" class="form-label">Nombre de usuario</label>
+    <div class="input-group">
+      <input name="nombre"
+            type="text" class="form-control" id="Nombre" >
+      <div>
+        El nombre de usuario es obligatorio y debe tener solamente minúsculas y sin espacios.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="Equipo" class="form-label">Equipo</label>
+    <select name="equipo"
+            class="form-select" id="Equipo"
+            required>
+      <option value="">Seleccionar equipo</option>
+      <option>NOMBRES DE EQUIPOS</option>
+    </select>
+    <div>
+      Seleccione un equipo.
+    </div>
+  </div>
+
+  <div class="col-2">
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </div>
+  <div class="col-2">
+    <button class="btn btn-warning" type="button">Cancelar</button>
+  </div>
+</form>
