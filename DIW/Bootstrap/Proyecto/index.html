@@ -35,7 +35,20 @@
           <a class="navbar-brand" href="#">
             <img src="./imagenes/CinematicHub.png" alt="Bootstrap" width="100" height="100">
           </a>
-          <i class="fa-solid fa-bars text-white"></i>
+          
+          <!-- OFF CANVAS -->
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars text-white"></i></button>
+
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Try scrolling the rest of the page to see this option in action.</p>
+            </div>
+          </div>
+
         </div>
         <form class="d-flex" role="search">
           <input class="form-control bottom me-2" type="search" placeholder="Search" aria-label="Search">
@@ -48,20 +61,20 @@
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content bg-primary">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-primary rounded">
               <div class="modal-header">
                 <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Iniciar sesion</h1>
                 <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <div class=" justify-content-around mt-3">
+                <div class="col-7 m-auto mt-4">
                   <form class="" role="log">
-                    <input class="form-control bottom m-auto" placeholder="Nombre de usuario" aria-label="Search">
+                    <input class="form-control bottom m-auto mb-3" placeholder="Nombre de usuario" aria-label="Search">
                     <input class="form-control bottom m-auto" placeholder="Contraseña" aria-label="Search">
                   </form>
                 </div>
-                <div class="row justify-content-around mt-3">
+                <div class="row justify-content-around mt-5">
                   <a href="#" class="btn btn-light col-6" tabindex="-1" role="button" aria-disabled="true"><i class="fa-brands fa-google"></i> Iniciar sesión con google</a>
                 </div>
                 <div class="row justify-content-around mt-3">
@@ -69,7 +82,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-light m-auto">Crea una cuenta nueva</button>
+                <span class="col-12 text-center text-white">o</span>
+                <button type="button" class="btn btn-light m-auto mt-4 mb-4">Crea una cuenta nueva</button>
               </div>
             </div>
           </div>
@@ -105,7 +119,28 @@
             <div class="carousel-caption d-none d-md-block">
               <h5>Napoleon</h5>
               <p>El alucinante biopic de Ridley Scott</p>
-              <button type="button" class="btn btn-light">Ver Trailer</button>
+
+              <!-- BOTON VER TRAILER -->
+
+              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#AsesinosDeLaLuna">Ver Trailer</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="AsesinosDeLaLuna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-primary rounded">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Napoleon</h1>
+                      <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid border bg-black " style="height: 300px;">
+                        <i class="fa-brands fa-youtube text-white h-25 mt-5 pt-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
           <div class="carousel-item">
@@ -113,7 +148,26 @@
             <div class="carousel-caption d-none d-md-block">
               <h5>Killers of the flower moon</h5>
               <p>La impresionante nueva historia de Martin Scorsese</p>
-              <button type="button" class="btn btn-light">Ver Trailer</button>
+              <!-- BOTON VER TRAILER -->
+
+              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#AsesinosDeLaLuna">Ver Trailer</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="AsesinosDeLaLuna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-primary rounded">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Los asesinos de la luna</h1>
+                      <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid border bg-black " style="height: 300px;">
+                        <i class="fa-brands fa-youtube text-white h-25 mt-5 pt-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
@@ -121,7 +175,26 @@
             <div class="carousel-caption d-none d-md-block">
               <h5>Los Juegos del Hambre: La Balada de Pajaros</h5>
               <p>La adaptacion del spin off protagonizado por Snow ha impactado en taquilla</p>
-              <button type="button" class="btn btn-light">Ver Trailer</button>
+              <!-- BOTON VER TRAILER -->
+
+              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#AsesinosDeLaLuna">Ver Trailer</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="AsesinosDeLaLuna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-primary rounded">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Los Juegos del Hambre</h1>
+                      <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid border bg-black " style="height: 300px;">
+                        <i class="fa-brands fa-youtube text-white h-25 mt-5 pt-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -158,9 +231,9 @@
               <div class="col-5 m-auto pb-2">
               <img src="./imagenes/Jenifer lawrence.PNG" class="img-fluid h-25 pb-2" alt="">
               </div>
-              <div class="col-5 m-auto pb-2">
+              <!-- <div class="col-5 m-auto pb-2">
               <img src="./imagenes/Ryan Gosling.PNG" class="img-fluid h-25" alt="">
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -228,7 +301,7 @@
           <img src="imagenes/CinematicHub.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
         </a>
         <ul class="nav col-md-4 justify-content-between">
-          <li class="nav-item"><a href="" class="nav-link px-5 text-muted"><i class="fa-brands fa-instagram text-white"></i></a></li>
+          <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><i class="fa-brands fa-instagram text-white"></i></a></li>
           <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><i class="fa-brands fa-x-twitter text-white"></i></a></li>
           <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><i class="fa-brands fa-youtube text-white"></i></a></li>
           <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><i class="fa-brands fa-discord text-white"></i></a></li>
