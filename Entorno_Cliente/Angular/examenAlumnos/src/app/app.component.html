@@ -1,0 +1,75 @@
+<div class="container-fluid bg-light">
+    <div class="container">
+        <div class="row align-items-center bg-light mb-5" style="min-height: 100px; text-align: center;">
+            <h1> EXAMEN DESARROLLO DE APLICACIONES WEB ENTORNO CLIENTE</h1>
+            <div class="container">
+                <div class="d-flex">
+                    <div class="flex-grow-1" style="text-align: left;">Bienvenido,XXXX XXXX XXXX. Está usted como usuario administrador </div>
+                    <button>CERRAR SESIÓN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+</div>
+<nav class="row bg-primary">
+
+    <button class="btn btn-primary col-3">Listar</button>
+    <button class="btn btn-primary col-3">Registrar</button>
+
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-3 col-1"></div>
+        <div class="col-sm-4 col-md-3 col-5" style="height: 473px;">
+            <img class="img-fluid" src="../assets/img/login.jpg">
+        </div>
+        <div class="col-5 col-sm-4 col-centered border border-black" style="height: 473px;">
+            <h2> Acceso a la web </h2>
+            <form autocomplete="off">
+
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">nombre</label>
+                    <div class="col-sm-9">
+
+                        <input type="text" class="form-control" formControlName="login" placeholder="Nombre del usuario">
+
+                        <span class="form-text text-danger">
+                          Debe de ser de al menos 3 letras
+                      </span>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" formControlName="passwd" placeholder="Passwrod">
+                        <span class="form-text text-danger">
+                          Debe introducir una contraseña
+                      </span>
+                    </div>
+                </div>
+
+
+                <div class="row m-2">
+
+                    <button type="submit" class="col-5 btn btn-primary">
+                        Registrarse
+                    </button>
+                    <div class="col-2"></div>
+                    <button type="submit" class="col-5 btn btn-primary float-end">
+                          Acceder
+                      </button>
+
+                </div>
+
+
+
+            </form>
+        </div>
+        <div class="col-1 col-sm-2"></div>
+    </div>
+</div>

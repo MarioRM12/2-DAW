@@ -1,0 +1,23 @@
+<form class="row mt-3">
+    <input class="col-3" type="text" placeholder="Nombre:" name="nombre" />
+    <button class="mt-1 btn-light col-2 right ml-1" type="submit">Enviar</button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre y apellidos</th>
+            <th scope="col">Correo electrónico</th>
+            <th scope="col">Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let usuario of usuarios">
+            <th scope="row">id</th>
+            <td>Lorena Larios</td>
+            <td>correo@correo.es</td>
+            <td>666666666</td>
+        </tr>
+    </tbody>
+</table>
