@@ -1,0 +1,132 @@
+@import 'mixins';
+@import 'variables';
+
+
+.container{
+
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.off{
+    
+    display: none;
+
+    @include dispositivo($escritorio){
+
+        display: block;
+
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+nav{
+
+    background-color: $azulPrincipal;    
+
+    #nav1{
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include dispositivo($tablet){
+            grid-template-columns: 1fr 60%;
+            align-items: center;
+        }
+
+
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            list-style: none;
+            gap: 5px;
+
+            @include dispositivo($escritorio){
+                grid-template-columns: repeat(6, auto);
+                align-items: center;
+            }
+
+            li{
+                display: grid;
+                color: white;
+                grid-template-columns: 1fr;
+
+                .btn1{
+                    color: $azulPrincipal;
+                    padding: 10px;
+                }
+
+                .btn2{
+                    color: $azulPrincipal;
+                    padding: 10px;
+                }
+            }
+
+            i{
+                color: white;
+            }
+
+                
+            img{
+                max-width: $ancho_bandera_spain;
+            }
+        }
+    }
+
+
+    #nav2{
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        ul{
+
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            li{
+                position: relative;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .desplegable{
+                    display: none;
+                }
+            }
+
+            li:hover .desplegable{
+                @include dispositivo($tablet){
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                    left: 0px;
+                    width: 100%;
+                    background-color: $azulPrincipal;
+                }
+            }
+        }
+    }
+}
+
+
+main{
+
+    display: grid;
+
+    #best-spain{
+
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    }
+}

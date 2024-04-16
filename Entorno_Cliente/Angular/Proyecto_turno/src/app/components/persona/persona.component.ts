@@ -18,8 +18,6 @@ export class PersonaComponent {
 
   estado:number=INACTIVO;
 
-
-
   constructor(private _chatService:ChatService){
     _chatService.evTurno.subscribe(t => {
         if(t==this.persona.id){

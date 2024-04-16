@@ -1,5 +1,7 @@
 <div class="card">
-    <img src="./assets/images/joven3a.png" class="card-img-top" [alt]="persona.nombre">
+    <img *ngIf="estadoInactivo()" src="../../../assets/images/joven3a.png" class="card-img-top" [alt]="persona.nombre">
+    <img *ngIf="estadoEsperando()" src="../../../assets/images/joven3b.png" class="card-img-top" [alt]="persona.nombre">
+    <img *ngIf="estadoHablando()" src="../../../assets/images/joven3c.png" class="card-img-top" [alt]="persona.nombre">
     <div class="card-body">
       <h5 class="card-title">{{persona.nombre}}</h5>
       
