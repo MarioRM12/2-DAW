@@ -39,13 +39,57 @@
           <!-- OFF CANVAS -->
           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars text-white"></i></button>
 
-          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+          <div class="offcanvas offcanvas-start bg-primary" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header border-bottom">
+              <img src="./imagenes/CinematicHub.png" alt="Bootstrap" width="50" height="50">
+              <h5 class="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">CinematicHub</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              <p>Try scrolling the rest of the page to see this option in action.</p>
+            <div class="offcanvas-body bg-secondary text-white">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Peliculas
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <ul class="p-5">
+                      <li><a href="#">Napoleon</a></li>
+                      <li><a href="#">Los asesinos de la luna</a></li>
+                      <li><a href="#">Los juegos del hambre una balada de pajaros cantores</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Series
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <ul class="p-5">
+                      <li><a href="#">Loki</a></li>
+                      <li><a href="#">Rick y Morty</a></li>
+                      <li><a href="#">Juego de tronos</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Novedades
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <ul class="p-5">
+                      <li><a href="#">Ridley scott responde a las polemicas</a></li>
+                      <li><a href="#">Dune parte 2 revienta la taquilla el primer fin de semana</a></li>
+                      <li><a href="#">Pobres criaturas consigue robar la estatuilla en varias categorias de los oscars</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -122,14 +166,17 @@
 
               <!-- BOTON VER TRAILER -->
 
-              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#AsesinosDeLaLuna">Ver Trailer</button>
+              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#Napoleon">Ver Trailer</button>
 
               <!-- Modal -->
-              <div class="modal fade" id="AsesinosDeLaLuna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal fade" id="Napoleon" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content bg-primary rounded">
                     <div class="modal-header">
                       <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Napoleon</h1>
+                      <div class="spinner-border m-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
                       <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -158,6 +205,9 @@
                   <div class="modal-content bg-primary rounded">
                     <div class="modal-header">
                       <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Los asesinos de la luna</h1>
+                      <div class="spinner-border m-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
                       <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -177,14 +227,17 @@
               <p>La adaptacion del spin off protagonizado por Snow ha impactado en taquilla</p>
               <!-- BOTON VER TRAILER -->
 
-              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#AsesinosDeLaLuna">Ver Trailer</button>
+              <button type="button" class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#LosJuegosDelHambre">Ver Trailer</button>
 
               <!-- Modal -->
-              <div class="modal fade" id="AsesinosDeLaLuna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal fade" id="LosJuegosDelHambre" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content bg-primary rounded">
                     <div class="modal-header">
                       <h1 class="modal-title fs-5 text-center text-white" id="exampleModalLabel">Trailer Los Juegos del Hambre</h1>
+                      <div class="spinner-border m-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
                       <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
