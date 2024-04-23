@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "mi-primera-app"
+  "defaultProject": "mi-primera-app",
+  "cli": {
+    "analytics": false
+  }
 }
