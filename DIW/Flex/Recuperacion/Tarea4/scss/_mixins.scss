@@ -1,0 +1,41 @@
+// Media queries
+@mixin mobile {
+    @media (max-width: 280px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Boton
+@mixin Boton($colorFondo,$colorTexto){
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: calc($margen/2) $margen;
+    text-decoration: none;
+    background-color: $colorFondo;
+    color: $colorTexto;
+}
+
+// Contenedor web
+@mixin contenedor-web {
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Contenedor interno
+@mixin contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}

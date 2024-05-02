@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    border:0px;
+    padding: 0px;
+
+    color: white;
+}
+
+
+body{
+    background-color: orange;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1100px;
+    background-color: white;
+}
+
+
+
+header{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h1{
+        align-self: center;
+    }
+
+    //justify-content: space-between;
+
+    ul{
+        list-style: none;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;       
+
+        li{
+            margin: 5px;
+        }
+
+
+    }
+}
+
+
+#contenido{
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content :center;
+
+        
+        flex-basis: 60%;
+
+        section{
+            flex-grow: 1;
+        }
+        
+        #Servicio1{
+            background-color: orange;
+        }
+
+        #Servicio2{
+            background-color: greenyellow;
+        }
+        #Servicio3{
+            background-color: purple;
+        }
+    }
+
+    aside{
+        padding: 5px;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+
+
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    background-color: purple;
+}
