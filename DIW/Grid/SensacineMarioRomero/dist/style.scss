@@ -1,10 +1,47 @@
+// GENERALES //
+
 *{
     margin: 0;
     padding: 0;
     border: 0;
 }
 
+// CENTRADO DE LOS CONTENEDORES //
+
+.container{
+
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+// EVITAR QUE LAS IMAGENES PASEN EL TAMAÑO DE SU CONTENEDOR //
+
 img{
     max-width: 100%;
 
 }
+
+#ParteSuperior{
+
+    background-color: $AmarilloPrincipal;
+
+    header{
+
+        img{
+
+            max-width: $ancho_logo;
+
+        }
+
+
+    }
+
+    nav{
+
+
+    }
+
+}
+
+
