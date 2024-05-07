@@ -1,0 +1,6 @@
+/*MIXIN PARA ADAPTAR A DISPOSITIVOS*/
+@mixin dispositivo($tamano) {
+    @media screen and (min-width:$tamano){
+        @content;
+    }
+}
