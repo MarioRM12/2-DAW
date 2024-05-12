@@ -1,0 +1,104 @@
+<h1>Ejemplo de API-REST</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <button (click)="reset()">
+                Reset
+            </button>
+        </div>
+        <div class="col">
+            <button (click)="getProductos()">
+                Productos
+            </button>
+        </div>
+        <div class="col">
+            <button (click)="getProductosDesde(3)">
+                Productos>3€
+            </button>
+        </div>
+        <div class="col">
+            <button (click)="getCategorias()">
+                Categorías
+            </button>
+        </div>
+        <div class="col">
+            <button (click)="getUsuarios()">
+                Usuarios
+            </button>
+        </div>
+        <div class="col">
+            <button (click)="getUsuariosConResultados()">
+                Usuarios con Resultados
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button (click)="crearProducto()">
+                Crear producto ejemplo
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h1>Productos</h1>
+            <div *ngFor="let p of productos" class="mb-5">
+                {{ p.nombre }}, {{ p.precio }}€
+                <button class="btn btn-danger mb-1 offset-3"
+                (click)="eliminarProducto(p)">
+                X
+                </button>
+                <div class="col-12">
+                    <button class="col-7 btn btn-primary"
+                    (click)="updateProducto(p, miParseInt(precio.value))">
+                    Nuevo precio
+                </button>
+                <input class="col-3" type="number" #precio>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h1>Categorías</h1>
+            <div *ngFor="let c of categorias" class="mb-5">
+                id: {{c.id}} - {{ c.nombre }}
+                <button class="btn btn-danger mb-1 offset-3"
+                (click)="eliminarCategoria(c)">
+                X
+                </button>
+                <div class="col-12">
+                    <button class="col-5 btn btn-primary"
+                    (click)="updateCategoria(c, nuevoNombre.value)">
+                    Modificar
+                </button>
+                <input class="col-6" type="text" #nuevoNombre>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h1>Usuarios</h1>
+            <div *ngFor="let u of usuarios" class="mb-5">
+                id:{{u.id}} {{ u.nombre }} -> [{{u.resultado}}]
+                <button class="btn btn-danger mb-1 offset-3"
+                (click)="eliminarUsuario(u)">
+                X
+                </button>
+                <div class="col-12">
+                    <button class="col-5 btn btn-primary"
+                    (click)="addResultado(u, miParseInt(resultado.value))">
+                    Añadir resultado
+                </button>
+                <input class="col-6" type="number" #resultado>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngFor="let p of pruebaSin2()">
+    {{ p.id }}:{{ p.nombre }}
+</div>
+<div *ngFor="let p of prueba">
+    {{ p.id }}:{{ p.nombre }}
+</div> -->
+
+<div class="footer" *ngIf="aviso.length>0">{{ aviso }}</div>

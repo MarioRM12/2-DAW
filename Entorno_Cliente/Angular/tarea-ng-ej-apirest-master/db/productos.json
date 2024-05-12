@@ -1,0 +1,104 @@
+{
+  "productos": [
+    {
+      "id": 5,
+      "nombre": "Destornillador",
+      "precio": 8,
+      "categoria": 1,
+      "inventario": 9
+    },
+    {
+      "id": 3,
+      "nombre": "Cuaderno",
+      "categoria": 3,
+      "inventario": 20,
+      "precio": 4
+    },
+    {
+      "id": 4,
+      "nombre": "Silla",
+      "precio": 35,
+      "categoria": 2,
+      "inventario": 4
+    },
+    {
+      "id": 8,
+      "nombre": "Regla",
+      "precio": 2,
+      "categoria": 3,
+      "inventario": 50
+    },
+    {
+      "id": 99,
+      "nombre": "ejemplo",
+      "precio": 88.88,
+      "categoria": 1
+    }
+  ],
+  "categorias": [
+    {
+      "id": 0,
+      "nombre": "Sin Categoria"
+    },
+    {
+      "id": 1,
+      "nombre": "Fontaneria"
+    },
+    {
+      "id": 2,
+      "nombre": "Mobiliario"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "",
+      "resultado": [
+        1,
+        1,
+        5
+      ],
+      "passwd": "passwd"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan",
+      "resultado": [
+        7,
+        7,
+        8,
+        8,
+        3
+      ],
+      "passwd": "passwd"
+    },
+    {
+      "id": 4,
+      "nombre": "Jose",
+      "resultado": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+      ],
+      "passwd": "passwd"
+    },
+    {
+      "id": 5,
+      "nombre": "Miguel",
+      "resultado": [
+        9
+      ],
+      "passwd": "passwd"
+    }
+  ]
+}
