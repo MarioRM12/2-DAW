@@ -29,12 +29,15 @@ export class AppService {
    getProductos():Observable<Object>{
     return this.http.get(PRODUCTOSURL);
    }
+
    getCategorias():Observable<Object>{
     return this.http.get(CATEGORIASURL);
    }
+   
    getUsuarios():Observable<Object>{
     return this.http.get(USUARIOSURL);
    }
+
    getProductosDesde(precio:number):Observable<Object>{
     let cadena:string = PR_DESDEPRECIOURL + precio.toString();
     // if(!cadena.includes('.')) {
@@ -43,17 +46,16 @@ export class AppService {
     console.log(cadena);
     return this.http.get(cadena);
    }
+
    deleteProducto(id:number):Observable<unknown> {
     const url = `${PR_DELETEURL}/${id}`
     return this.http.delete(url, httpOptions)
       .pipe(catchError(this.handleError));
    }
 
-
    crearProducto(producto:Producto):Observable<Object>{
     return this.http.post<Producto>(PRODUCTOSURL, producto, httpOptions);
    }
-
 
    updateProducto(producto:Producto):Observable<Object>{
     const url = `${PRODUCTOSURL}/${producto.id}`;
@@ -69,11 +71,9 @@ export class AppService {
       .pipe(catchError(this.handleError));
    }
 
-
    crearUsuario(usuario:Usuario):Observable<Object>{
     return this.http.post<Usuario>(USUARIOSURL, usuario, httpOptions);
    }
-
 
    updateUsuario(usuario:Usuario):Observable<Object>{
     const url = `${USUARIOSURL}/${usuario.id}`;
@@ -89,11 +89,9 @@ export class AppService {
       .pipe(catchError(this.handleError));
    }
 
-
    crearCategoria(categoria:Categoria):Observable<Object>{
     return this.http.post<Categoria>(CATEGORIASURL, categoria, httpOptions);
    }
-
 
    updateCategoria(categoria:Categoria):Observable<Object>{
     const url = `${CATEGORIASURL}/${categoria.id}`;
@@ -134,7 +132,7 @@ export interface Categoria {
 }
 
 export interface Usuario {
-  id: number, //Aqui estaba 2??
+  id: number, 
   nombre: string,
   resultado: any[],
   passwd: string
