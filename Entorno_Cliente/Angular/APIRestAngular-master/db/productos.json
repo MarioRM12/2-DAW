@@ -1,0 +1,92 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Bolígrafo",
+      "precio": 1,
+      "categoria": 3,
+      "inventario": 100
+    },
+    {
+      "id": 2,
+      "nombre": "Martillo",
+      "precio": 99,
+      "categoria": 1,
+      "inventario": 15
+    },
+    {
+      "id": 5,
+      "nombre": "Destornillador",
+      "precio": 99,
+      "categoria": 1,
+      "inventario": 9
+    },
+    {
+      "id": 8,
+      "nombre": "Regla",
+      "precio": 5,
+      "categoria": 3,
+      "inventario": 50
+    },
+    {
+      "id": 99,
+      "nombre": "ejemplo",
+      "precio": 88.88,
+      "categoria": 1
+    }
+  ],
+  "categorias": [
+    {
+      "id": 0,
+      "nombre": "CatPRUEBA"
+    },
+    {
+      "id": 1,
+      "nombre": "CatPRUEBA"
+    },
+    {
+      "id": 2,
+      "nombre": "CatPRUEBA"
+    },
+    {
+      "id": 3,
+      "nombre": "CatPRUEBA"
+    },
+    {
+      "id": 99,
+      "nombre": "ejemplo"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "PRUEBA",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 2,
+      "nombre": "PRUEBA",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 3,
+      "nombre": "PRUEBA",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 4,
+      "nombre": "PRUEBA",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 99,
+      "nombre": "ejemplo",
+      "resultado": [],
+      "passwd": "passwd"
+    }
+  ]
+}
