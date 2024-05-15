@@ -1,3 +1,7 @@
+@import "_variables";
+@import "_mixins";
+
+
 // GENERALES //
 
 *{
@@ -31,7 +35,7 @@ img{
         img{
 
             max-width: $ancho_logo;
-
+        
         }
 
 

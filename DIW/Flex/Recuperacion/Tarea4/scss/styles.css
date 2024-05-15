@@ -1,192 +1,92 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
 }
 
-body {
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+#ContenidoHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: sans-serif;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
-}
-
-header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-header #ContenidoHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 16px;
 }
-header #MenuCarrito {
+#ContenidoHeader #ContenidoCarrito {
   display: none;
-  width: 30%;
 }
-header #Carrito:hover > #MenuCarrito {
-  display: block;
+#ContenidoHeader #Carrito {
+  position: relative;
+}
+#ContenidoHeader #Carrito:hover #ContenidoCarrito {
   position: absolute;
+  display: block;
+  width: 400px;
   top: 100%;
-  right: 16px;
-  padding: 0 16px 16px;
-  background-color: white;
-}
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div img {
-  width: 100%;
-  margin-bottom: 2px;
-}
-header #Carrito:hover > #MenuCarrito #ContenidoCarrito div p {
-  margin: auto;
-}
-header #Carrito:hover > #MenuCarrito a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color: #0056b3;
-  color: white;
+  right: 0;
 }
 
 #Banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-image: url(../img/hero.jpg);
+  background-image: url(/img/hero.jpg);
   background-size: cover;
   background-position: center;
   height: 400px;
   color: white;
-}
-#Banner #Buscador {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
 }
 #Banner .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 16px;
-}
-#Banner #Buscador {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-}
-#Banner #Buscador input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 8px;
-}
-#Banner #Buscador #IconoBuscar {
-  margin-left: -32px;
-  height: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 480px) {
-  #Banner #Buscador {
-    width: 400px;
+  #Banner .container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
-#Banner h1, #Banner small {
-  margin: 16px 0;
+#Banner .container h1 {
+  margin-bottom: 10px;
+}
+#Banner .container #Buscador {
+  margin: 10px;
+}
+#Banner .container #Buscador input {
+  padding: 10px 30px;
 }
 
 #Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left top, right top, from(#741d51), to(#e34d52));
-  background: linear-gradient(to right, #741d51, #e34d52);
+  background-color: red;
+  color: white;
 }
-#Info .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+#Info .cajas {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-#Info .container .iconoInfo {
-  margin: 16px;
-  height: 45px;
-}
-#Info .container .texto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,174 +94,41 @@ header #Carrito:hover > #MenuCarrito a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 16px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
-@media (min-width: 768px) {
-  #Info .container {
+@media (min-width: 480px) {
+  #Info .cajas {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
+}
+#Info .cajas .caja {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Info .cajas .caja .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 16px;
 }
-main h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-main #Cursos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-main #Cursos .Curso {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 16px 0;
-  border: solid lightgrey 1px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(100% - 16px);
-          flex: 1 0 calc(100% - 16px);
-}
-@media (max-width: 280px) {
-  main #Cursos .Curso {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(50% - 16px);
-            flex: 1 0 calc(50% - 16px);
-  }
-}
-@media (min-width: 480px) {
-  main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(33.3333333333% - 16px);
-            flex: 0 0 calc(33.3333333333% - 16px);
-  }
-}
-@media (min-width: 768px) {
-  main #Cursos .Curso {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
-  }
-}
-main #Cursos .Curso .Boton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color: #007bff;
-  color: white;
-}
-main #Cursos .Curso img {
-  width: 100%;
-}
-main #Cursos .Curso #Estrellas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-main #Cursos .Curso h3, main #Cursos .Curso p, main #Cursos .Curso img, main #Cursos .Curso div {
-  margin-bottom: 16px;
-}
-main #Cursos .Curso .Precio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-main #Cursos .Curso .Precio small {
-  text-decoration: line-through;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: black;
-}
-footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-footer .container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 16px;
-}
-footer .container div a {
-  text-decoration: none;
-  color: white;
-}
-@media (min-width: 768px) {
-  footer .container div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(25% - 16px);
-            flex: 0 0 calc(25% - 16px);
-  }
-}/*# sourceMappingURL=styles.css.map */

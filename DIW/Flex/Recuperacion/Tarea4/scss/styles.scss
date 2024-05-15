@@ -1,0 +1,108 @@
+@import '_mixins';
+@import '_variables';
+
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+#ContenidoHeader{
+    display: flex;
+    justify-content: space-between;
+
+    #ContenidoCarrito{
+        display: none;
+    }
+
+    #Carrito{
+        position: relative;
+
+        &:hover #ContenidoCarrito{
+            position: absolute;
+            display: block;
+            width: 400px;
+            top: 100%;
+            right: 0;
+        }
+    }
+}
+
+
+#Banner{
+    background-image: url(/img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+
+    display: flex;
+    .container{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet(){
+            align-items: flex-start;
+        }
+
+        h1{
+            margin-bottom: 10px;
+        }
+        
+        #Buscador{
+            margin: 10px    ;
+            input{
+                padding: 10px 30px;
+            }
+        }
+
+    }
+}
+
+#Info{
+    display: flex;
+    background-color: red;
+    color: white;
+
+    .cajas{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+ 
+        @include tablet(){
+            flex-direction: row;
+         
+          }
+      
+        .caja{
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            
+
+            .texto{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    
+}
+
+main{
+    display: flex;
+    #Cursos{
+        
+    }
+}

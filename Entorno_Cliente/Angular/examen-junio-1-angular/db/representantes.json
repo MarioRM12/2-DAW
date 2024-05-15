@@ -1,0 +1,49 @@
+{
+  "partidos": [
+    {
+      "id": 43,
+      "nombre": "Los azules"
+    },
+    {
+      "id": 49,
+      "nombre": "Los blancos"
+    }
+  ],
+  "representantes": [
+    {
+      "id": 23,
+      "nombre": "Juan Pérez",
+      "partido": 43
+    },
+    {
+      "id": 25,
+      "nombre": "Ana Soria",
+      "partido": 43
+    },
+    {
+      "id": 29,
+      "nombre": "Patricia Badalona",
+      "partido": 43
+    },
+    {
+      "id": 31,
+      "nombre": "Pedro Artero",
+      "partido": 49
+    },
+    {
+      "id": 36,
+      "nombre": "Fernando Trueba",
+      "partido": 49
+    },
+    {
+      "id": 37,
+      "nombre": "Adrián Lastra",
+      "partido": 49
+    },
+    {
+      "id": 38,
+      "nombre": "Rafael Nadall",
+      "partido": "49"
+    }
+  ]
+}

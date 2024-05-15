@@ -62,7 +62,89 @@ main{
     }
 
     #conIconos{
+        display: flex;
+        flex-direction: column;
         
+
+        @include dispositivo($escritorio){
+
+
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        li{
+
+            @include dispositivo($escritorio){
+                flex-grow: 1;
+            }
+            
+        }
+
+    }
+
+    #dropdownMenu{
+        display: flex;
+        flex-direction: column;
+
+        @include dispositivo($escritorio){
+
+
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        li{
+
+            @include dispositivo($escritorio){
+                flex-grow: 1;
+            }
+            
+        }
+
+        
+
+        #tienda{
+            position: relative;
+
+            #tiendaUL{
+                display: none;
+            }
+
+
+        }
+
+
+        #tienda:hover #tiendaUL{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+        }
+
+        #nosotros{
+            position: relative;
+
+            #nosotrosUL{
+                display: none;
+                
+                
+            }
+        }
+
+        #nosotros:hover #nosotrosUL{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+                
+        }
+
+       
+
+       
     }
 
 }
