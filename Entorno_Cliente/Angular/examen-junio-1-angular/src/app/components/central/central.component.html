@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="100vw">RECUENTO DE ELECCIONES</h1>
+    <div class="row mt-4">
+        <div class="col-12 bg-light">
+            <h2>DATOS DEL RECUENTO</h2>
+        </div>
+        <div class="col-12" [ngClass]="{'bg-warning': contador_sedes === 8 }" > 
+            <!-- No funciona                                                                                      | percent -->
+            <span [ngClass]="{'final': contador_sedes === 8 }" id="porcentaje">Porcentaje escrutado: {{ porcentaje          }}%</span> <br/>
+            <span [ngClass]="{'ganador': resultado_partido_1>resultado_partido_2 }" id="resultados1">Representación partido 1: {{ resultado_partido_1 }}</span> <br>
+            <span [ngClass]="{'ganador': resultado_partido_2>resultado_partido_1 }" id="resultados2">Representación partido 2: {{ resultado_partido_2 }}</span> <br>
+            <button class="btn btn-primary" *ngIf="contador_sedes === 8" (click)="resetear()">resetear</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 bg-light"><h2>ESTADO DE LAS SEDES</h2></div>
+
+        <app-sede class="col-3" *ngFor="let sedeElemento of sedes; let i = index"
+        [reseteo]="reseteo" 
+        [sede]="sedeElemento" 
+        (evTarjetaSeleccionada)="computarSede($event, i)"></app-sede>
+
+    </div>
+</div>

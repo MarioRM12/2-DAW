@@ -1,0 +1,121 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "login": "manuel",
+      "nombreCompleto": "Manuel Aragonés Morales",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 2,
+      "login": "cliente",
+      "nombreCompleto": "cliente Morales Márquez",
+      "passwd": "cliente",
+      "email": "manuel@examen.es",
+      "rol": "cliente",
+      "telefono": "666666666"
+    },
+    {
+      "id": 3,
+      "login": "Lorena",
+      "nombreCompleto": "Lorena Larios",
+      "passwd": "lorena",
+      "email": "lorena@examen.es",
+      "rol": "cliente",
+      "telefono": "666666666"
+    },
+    {
+      "id": 4,
+      "login": "Mónica",
+      "nombreCompleto": "Mónica Aragonés Morales",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 5,
+      "login": "Maite",
+      "nombreCompleto": "Maite Morales Márquez",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 6,
+      "login": "Monse",
+      "nombreCompleto": "Ana Morales Márquez",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "cliente",
+      "telefono": "666666666"
+    },
+    {
+      "id": 7,
+      "login": "Miguel",
+      "nombreCompleto": "Miguel Aragonés Morales",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 8,
+      "login": "Mustafa",
+      "nombreCompleto": "Mustafa Abdel",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 9,
+      "login": "Martina",
+      "nombreCompleto": "Martina Pérez Márquez",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "cliente",
+      "telefono": "666666666"
+    },
+    {
+      "id": 10,
+      "login": "Mercedes",
+      "nombreCompleto": "Mercedes Aragonés Morales",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 11,
+      "login": "Macarea",
+      "nombreCompleto": "Macarena Morales Márquez",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "administrador",
+      "telefono": "666666666"
+    },
+    {
+      "id": 12,
+      "login": "Miranda",
+      "nombreCompleto": "Miranda Wilson Márquez",
+      "passwd": "manuel",
+      "email": "manuel@examen.es",
+      "rol": "cliente",
+      "telefono": "666666666"
+    },
+    {
+      "id": 13,
+      "login": "prueba",
+      "nombreCompleto": "Prueba",
+      "passwd": "12345",
+      "rol": "cliente",
+      "email": "prueba@examen.es",
+      "telefono": "612612612"
+    }
+  ]
+}

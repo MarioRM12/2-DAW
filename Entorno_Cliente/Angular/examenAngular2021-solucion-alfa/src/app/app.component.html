@@ -1,0 +1,31 @@
+<div class="container-fluid bg-light">
+  <div class="container">
+      <div class="row align-items-center bg-light mb-5" style="min-height: 100px; text-align: center;">
+          <h1> EXAMEN DESARROLLO DE APLICACIONES WEB ENTORNO CLIENTE</h1>
+          <div class="container" *ngIf="usuarioLogeado">
+              <div class="d-flex">
+                  <div class="flex-grow-1" style="text-align: left;">Bienvenido,{{usuario.nombreCompleto}}. Está usted como usuario {{usuario.rol}} </div>
+                  <button (click)="cerrarSesion()">CERRAR SESIÓN</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+
+</div>
+<nav *ngIf="usuarioLogeado" class="row bg-primary">
+
+    <a [routerLink]="[ '/listar' ]" 
+        routerLinkActive="active"
+        class="btn btn-primary col-3">
+    Listar</a>
+    
+   
+    <a  [routerLink]="[ '/registrar' ]" 
+        routerLinkActive="active"
+        class="btn btn-primary col-3">
+    Registrar</a>
+    
+  </nav>
+<router-outlet></router-outlet>

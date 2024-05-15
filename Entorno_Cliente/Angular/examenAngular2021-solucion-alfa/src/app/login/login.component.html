@@ -1,0 +1,62 @@
+<form (ngSubmit)="acceder(login.value, password.value)" 
+    #tFormulario="ngForm"
+    autocomplete="off">
+
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+
+            <input type="text" 
+                class="form-control"
+                [(ngModel)]="usuario"
+                name="login"
+                #login="ngModel"
+                placeholder="Nombre del usuario"
+                minlength="3"
+                pattern="[a-zA-Z]{3,}.*"
+                required>
+
+            <span *ngIf="!login.valid" class="form-text text-danger">
+              Debe de ser de al menos 3 letras
+          </span>
+          
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-9">
+            <input type="password"
+                [(ngModel)]="passwd"
+                name="password"
+                #password="ngModel"
+                class="form-control"
+                placeholder="Password"
+                required>
+            <span *ngIf="!password.valid" class="form-text text-danger">
+              Debe introducir una contraseña
+          </span>
+        </div>
+    </div>
+
+
+    <div class="row m-2">
+
+        <button [disabled]="!tFormulario.valid" 
+            (click)="clickRegistrar()"
+            type="submit" 
+            class="col-5 btn btn-primary">
+            Registrarse
+        </button>
+        <div class="col-2"></div>
+        <button [disabled]="!tFormulario.valid" 
+            (click)="clickAcceder()"
+            type="submit" 
+            class="col-5 btn btn-primary float-end">
+              Acceder
+        </button>
+
+    </div>
+
+</form>

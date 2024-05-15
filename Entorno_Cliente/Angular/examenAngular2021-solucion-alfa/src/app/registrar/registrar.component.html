@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="col-3 bg-secondary" style="height: 100vh;">
+        <button class="col-12 btn btn-secondary">Administradores</button>
+
+        <button class="col-12 btn btn-secondary m-0">Clientes</button>
+    </div>
+    <div class="col-9" style="height: 100vh;">
+        <h3>REGISTRO DE USUARIOS</h3>
+        <form (ngSubmit)="registrar(tFormulario)" #tFormulario="ngForm" autocomplete="off" novalidate>
+            <!-- NOMBRE -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Login</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.login"
+                        name="login"
+                        #login
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Nombre de usuario"
+                        required>
+
+
+                </div>
+            </div>
+            <!-- NOMBRE COMPLETO -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Nombre y apellidos</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.nombreCompleto"
+                        name="nombreCompleto"
+                        #nombreCompleto
+                        type="text" class="form-control" placeholder="Nombre completo"
+                        required>
+
+
+                </div>
+            </div>
+            <!-- EMAIL -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Correo electrónico</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.email"
+                        name="email"
+                        #email
+                        type="mail" 
+                        pattern="[a-zA-Z0-9\-\_]{3,}@examen.es"
+                        class="form-control" 
+                        placeholder="Email@"
+                        required>
+
+
+                </div>
+            </div>
+            <!-- ROL -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Rol</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.rol"
+                        name="rol"
+                        #rol
+                        type="text" class="form-control" 
+                        placeholder="administrador/cliente"
+                        [disabled]="!usuarioAdmin"
+                        pattern="(cliente|administrador)"
+                        required>
+
+
+                </div>
+            </div>
+            <!-- TELÉFONO -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Teléfono</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.telefono"
+                        name="telefono"
+                        #telefono
+                        type="text" 
+                        class="form-control" 
+                        placeholder="666666666"
+                        pattern="[0-9]{9}"
+                        required>
+
+
+                </div>
+            </div>
+            <!-- PASSWORD -->
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-9">
+
+                    <input [(ngModel)]="usuarioNuevo.passwd"
+                        name="passwd"
+                        #passwd
+                        type="password" 
+                        class="form-control" 
+                        placeholder="Contraseña"
+                        minlength="3"
+                        required>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-11">
+                    <button [disabled]="!tFormulario.valid"
+                        type="submit" class="btn btn-secondary float-end">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+<p>{{usuarioAdmin}}</p>

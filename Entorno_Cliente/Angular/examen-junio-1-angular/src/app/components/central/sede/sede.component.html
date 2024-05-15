@@ -1,0 +1,11 @@
+    <div class="card">
+      <div class="card-body" [ngClass]="{'bg-warning': !enviado}" >
+        <h5 class="card-title">{{sede.nombre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          Partido 1: <b>{{ sede.representantes_1 }}</b><br/>
+          Partido 2: <b>{{ sede.representantes_2 }}</b>
+        </h6>
+        <button class="card-link btn btn-primary" (click)="enviarResultado()" *ngIf="enviado">Enviar</button>
+        <h3 *ngIf="!enviado">Enviado</h3>
+      </div>
+    </div>
