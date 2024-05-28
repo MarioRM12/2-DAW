@@ -49,7 +49,7 @@ img{
             .input-container{
 
                 position: relative;
-                //width: fit-content;
+                width: fit-content;
                 margin-bottom: 0.5em;
 
                 input {
@@ -70,7 +70,6 @@ img{
                 }
             }
         }
-
     }
 
     nav{
@@ -109,7 +108,6 @@ img{
                             font-size: small;
                         }
                     }
-                
                 }
 
                 &:hover #desplegable{
@@ -117,25 +115,16 @@ img{
                         @include desplegable($AmarilloPrincipal)
                     }
                 }
-
             }
-
-            #MiCuenta{
-                
-                //grid-column: 10;                
-
-            }
-
         }
-
     }
-
 }
 
 // MAIN //
 
 main {
-    padding: 20px 0;
+
+    margin-top: 1em;
     
     img{
         width: 100%;
@@ -145,45 +134,51 @@ main {
         
         h2{
             text-align: center;
+            padding: 1rem;
         }
         .carousel {
+
             position: relative;
             margin-bottom: 20px;
             display: grid;
             grid-template-columns: 1fr;
+            gap: 0.5em;
       
             @include dispositivo($tablet){
-              grid-template-columns: 33% 33% 33%;
+                grid-template-columns: calc(100%/2 - 0.5em);
             }
-      
+
+            @include dispositivo($escritorio){
+                grid-template-columns: calc(100%/3 - 0.5em);
+            }
+
             .Texto {
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              color: white;
-              background: rgba(0, 0, 0, 0.5);
-              padding: 10px;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                color: white;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 10px;
             }
       
             .destacado {
-
                 position: relative;
 
-              @include dispositivo($tablet) {
-                grid-column: 1/3;
-              }
+                @include dispositivo($tablet) {
+                    grid-column: 1/3;
+                }
       
-              @include dispositivo($escritorio) {
-                grid-column: 1/4;
-              }
+                @include dispositivo($escritorio) {
+                    grid-column: 1/4;
+                }
             }
         
             .carousel-item {
-              position: relative;
+                position: relative;
       
-              @include dispositivo($escritorio) {
-                  grid-row: 2/3;
-              }
+                @include dispositivo($escritorio) {
+                    grid-row: 2/3;
+                }
             }
           }
         
@@ -191,6 +186,7 @@ main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 1em;
+            margin-bottom: 1em;
         
             .pelicula {
               position: relative;
@@ -222,10 +218,6 @@ footer{
         grid-template-columns: 1fr;
         text-align: center;
 
-        ul{
-            list-style: none;
-        }
-
         @include dispositivo($tablet){
             grid-template-columns: 50% 50%;
             grid-template-rows: 33% 33% 33%;
@@ -234,6 +226,14 @@ footer{
         @include dispositivo($escritorio){
             grid-template-columns: 33% 33% 33%;
             grid-template-rows: 50% 50%;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        div{
+            padding: 1rem;
         }
 
         #siguenosFooter{
@@ -274,14 +274,11 @@ footer{
         #infoFooter{
 
             display: grid;
+            grid-template-rows: 50% 50%;
 
             ul{
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-
-            #infoFooterFotos{
-
             }
 
             @include dispositivo($tablet){
@@ -295,9 +292,10 @@ footer{
             }
 
             #infoFooterFotos{
+                padding: 0;
                 img{
                     max-width: 10rem;
-                }
+                }  
             }
         }
     }
