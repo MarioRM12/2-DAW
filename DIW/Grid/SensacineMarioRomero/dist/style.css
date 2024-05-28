@@ -21,15 +21,15 @@ img {
 #ParteSuperior header {
   display: grid;
   grid-template-columns: 30% 1fr;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #ParteSuperior header #Logo img {
   width: 150px;
 }
 #ParteSuperior header #Buscador .input-container {
   position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
   margin-bottom: 0.5em;
 }
 #ParteSuperior header #Buscador .input-container input {
@@ -43,7 +43,8 @@ img {
   position: absolute;
   right: 0.5em;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #999;
 }
 #ParteSuperior nav {
@@ -83,10 +84,14 @@ img {
     left: 0px;
     width: 100%;
     background-color: #fecc00;
+    z-index: 1;
   }
 }
 main {
   padding: 20px 0;
+}
+main img {
+  width: 100%;
 }
 main section h2 {
   text-align: center;
@@ -109,9 +114,6 @@ main section .carousel .Texto {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
-}
-main section .carousel img {
-  width: 100%;
 }
 main section .carousel .destacado {
   position: relative;
@@ -141,10 +143,6 @@ main section .cartelera {
 }
 main section .cartelera .pelicula {
   position: relative;
-}
-main section .cartelera .pelicula img {
-  width: 100%;
-  height: auto;
 }
 main section .cartelera .pelicula .pelicula-info {
   position: absolute;
@@ -189,22 +187,29 @@ footer #divsFooter #movilFooter ul {
   grid-template-columns: 1fr 1fr;
 }
 @media screen and (min-width: 480px) {
-  footer #divsFooter #sensacineFooter ul {
+  footer #divsFooter #extranjeroFooter ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
 @media screen and (min-width: 480px) {
-  footer #divsFooter #sensacineFooter {
+  footer #divsFooter #extranjeroFooter {
     grid-column: 1/3;
     grid-row: 2/3;
   }
 }
 @media screen and (min-width: 768px) {
-  footer #divsFooter #sensacineFooter {
+  footer #divsFooter #extranjeroFooter {
     grid-column: 3/4;
     grid-row: 1/2;
   }
+}
+footer #divsFooter #infoFooter {
+  display: grid;
+}
+footer #divsFooter #infoFooter ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 @media screen and (min-width: 480px) {
   footer #divsFooter #infoFooter {
@@ -214,10 +219,10 @@ footer #divsFooter #movilFooter ul {
 }
 @media screen and (min-width: 768px) {
   footer #divsFooter #infoFooter {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 2/3;
   }
 }
 footer #divsFooter #infoFooter #infoFooterFotos img {
   max-width: 10rem;
-}/*# sourceMappingURL=style.css.map */
+}
