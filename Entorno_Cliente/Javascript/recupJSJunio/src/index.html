@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <!-- Incluir el CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/underscore-min.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div id="loginForm" class="row mt-2 ml-5">
+        <input type="text" id="username" class=" col-2" placeholder="Usuario">
+        <input type="password" id="password" class=" col-2" placeholder="Contraseña">
+        <button id="botonLogin" class="btn btn-danger ml-2 col-2">Entrar</button>
+        <button id="botonCerrar" class="btn btn-danger ml-2 col-2" hidden>Cerrar sesión</button>
+        <div id="reset" class="col-2 ml-5 btn btn-danger">RESET</div>
+        <div class="col-5 mb-2 text-center">
+            <h1 id="nombre_usuario"></h1>
+        </div>
+        
+    </div>
+    <div id="desktop">
+    <div class="row bg-secondary text-white">
+        <div class="col-12 text-center">
+            MÓDULOS A REPARTIR
+        </div>
+    </div>
+    <div id="modulos" class="row">
+        <div id="modulo0" class="col-2 m-2 btn btn-success">
+            <h1>MOD1</h1>
+            <span id="horasModulo0">(x)</span>
+        </div>
+        <div id="modulo1" class="col-2 m-2 btn btn-success">
+            <h1>MOD2</h1>
+            <span id="horasModulo1">(x)</span>
+        </div>
+        <div id="modulo2" class="col-2 m-2 btn btn-success">
+            <h1>MOD3</h1>
+            <span id="horasModulo2">(x)</span>
+        </div>
+        <div id="modulo3" class="col-2 m-2 btn btn-success">
+            <h1>MOD4</h1>
+            <span id="horasModulo3">(x)</span>
+        </div>
+    </div>
+    <div class="row bg-secondary text-white">
+        <div class="col-12 text-center">
+            ASIGNACIÓN A PROFESORES
+        </div>
+    </div>
+    <div id="profesores" class="row bg-warning">
+        <div id="profesor0" class="col-2 mt-2 profesor">
+            <div id="botonProfesor0" class="col btn btn-primary text-white">
+                <h1>Profe1</h1><small>Horas: <span id="horas0">0</span></small>
+            </div>
+        </div>
+        <div id="profesor1" class="col-2 mt-2 profesor">
+            <div id="botonProfesor1" class="col btn btn-primary text-white">
+                <h1>Profe2</h1><small>Horas: <span id="horas0">0</span></small>
+            </div>
+        </div>
+    </div>
+    </div>
+        <!-- Incluir los javascripts -->
+    <script src="js/globales.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
